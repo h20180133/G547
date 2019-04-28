@@ -6,9 +6,7 @@
 
 #define MAGIC_NUMBER 'T'
 #define ADC_SEQ 0x01
-#define CHANNEL_SEQ 0x02
 
-#define SEND_THRESHOLD 1
 
 
 #define THRESHOLD _IOW(MAGIC_NUMBER,ADC_SEQ,unsigned long)
