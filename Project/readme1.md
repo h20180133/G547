@@ -14,32 +14,41 @@ To build kernel module
 `$ make all`
 
 To insert kernel module
+
 `$ make insert`
 
 To remove kernel module
+
 `$ make remove`
 
 To clean up files
+
 `$ make clean`
 
 Firmware
 To create hex file
+
 `$ make hex`
 
 To set fuses
+
 `$ make fuse`
 
 To flash the code
+
 `$ make flash`
 
 To clean up files
+
 `$ make clean`
 
 commandline
 To build program
+
 `$ make all`
 
 To get sensor readings
+
 `$ ./ldr_adc get 0`
 
 To send threshold values
