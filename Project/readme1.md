@@ -14,53 +14,55 @@ To build kernel module
 `$ make all`
 
 To insert kernel module
-$make insert
+`$ make insert`
 
 To remove kernel module
-$make remove
+`$ make remove`
 
 To clean up files
-$make clean
+`$ make clean`
 
 Firmware
 To create hex file
-$make hex
+`$ make hex`
 
 To set fuses
-$make fuse
+`$ make fuse`
 
 To flash the code
-$make flash
+`$ make flash`
 
 To clean up files
-$make clean
+`$ make clean`
 
 commandline
 To build program
-$make all
+`$ make all`
 
 To get sensor readings
-$./ldr_adc get 0
+`$ ./ldr_adc get 0`
 
 To send threshold values
-$./ldr_adc set 0
+```
+$ ./ldr_adc set 0
 $./ldr_adc set 1
 $./ldr_adc set 2
 $./ldr_adc set 3
-
+```
 
 userapp
 To compile
-$make compile
+`$ make compile`
 
 To run
-$./userapp set 0
-$./userapp set 1
+```
+$ ./userapp set 0
+$ ./userapp set 1
 $./userapp set 2
 $./userapp set 3
+```
 
-
-
+Project made by: Likhith V (2018H1400133G) and Krishna Chaithanya Reddy (2018H1400126G)
 
 
 
