@@ -12,7 +12,7 @@
 
 
 #define THRESHOLD _IOW(MAGIC_NUMBER,ADC_SEQ,unsigned long)
-#define CHANNEL _IOR(MAGIC_NUMBER,CHANNEL_SEQ,unsigned long)
+
 
 
 #endif
