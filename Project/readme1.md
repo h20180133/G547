@@ -10,7 +10,8 @@ Build process
 
 Driver
 To build kernel module
-$make all
+
+`$ make all`
 
 To insert kernel module
 $make insert
