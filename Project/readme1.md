@@ -57,7 +57,7 @@ To get sensor readings
 
 To send threshold values
 ```
-$ ./ldr_adc set 0
+$./ldr_adc set 0
 $./ldr_adc set 1
 $./ldr_adc set 2
 $./ldr_adc set 3
@@ -69,8 +69,8 @@ To compile
 
 To run
 ```
-$ ./userapp set 0
-$ ./userapp set 1
+$./userapp set 0
+$./userapp set 1
 $./userapp set 2
 $./userapp set 3
 ```
