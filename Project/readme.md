@@ -13,6 +13,7 @@ LDR returns higher value when light intensity is less and returns lower value wh
 *Build process*
 
 *Driver*
+
 To build kernel module
 
 `$ make all`
