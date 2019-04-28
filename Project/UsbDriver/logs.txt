@@ -1,0 +1,2408 @@
+[Apr27 21:57] microcode: microcode updated early to revision 0x8e, date = 2018-03-24
+[  +0.000000] Linux version 4.15.0-47-generic (buildd@lgw01-amd64-028) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10)) #50~16.04.1-Ubuntu SMP Fri Mar 15 16:06:21 UTC 2019 (Ubuntu 4.15.0-47.50~16.04.1-generic 4.15.18)
+[  +0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-4.15.0-47-generic root=UUID=46f04cb9-7c7a-48eb-b2ee-51fe8b48198c ro quiet splash vt.handoff=7
+[  +0.000000] KERNEL supported cpus:
+[  +0.000000]   Intel GenuineIntel
+[  +0.000000]   AMD AuthenticAMD
+[  +0.000000]   Centaur CentaurHauls
+[  +0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[  +0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[  +0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[  +0.000000] x86/fpu: Supporting XSAVE feature 0x008: 'MPX bounds registers'
+[  +0.000000] x86/fpu: Supporting XSAVE feature 0x010: 'MPX CSR'
+[  +0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[  +0.000000] x86/fpu: xstate_offset[3]:  832, xstate_sizes[3]:   64
+[  +0.000000] x86/fpu: xstate_offset[4]:  896, xstate_sizes[4]:   64
+[  +0.000000] x86/fpu: Enabled xstate features 0x1f, context size is 960 bytes, using 'compacted' format.
+[  +0.000000] e820: BIOS-provided physical RAM map:
+[  +0.000000] BIOS-e820: [mem 0x0000000000000000-0x0000000000057fff] usable
+[  +0.000000] BIOS-e820: [mem 0x0000000000058000-0x0000000000058fff] reserved
+[  +0.000000] BIOS-e820: [mem 0x0000000000059000-0x000000000009dfff] usable
+[  +0.000000] BIOS-e820: [mem 0x000000000009e000-0x00000000000fffff] reserved
+[  +0.000000] BIOS-e820: [mem 0x0000000000100000-0x0000000056968fff] usable
+[  +0.000000] BIOS-e820: [mem 0x0000000056969000-0x0000000056969fff] ACPI NVS
+[  +0.000000] BIOS-e820: [mem 0x000000005696a000-0x000000005696afff] reserved
+[  +0.000000] BIOS-e820: [mem 0x000000005696b000-0x0000000058387fff] usable
+[  +0.000000] BIOS-e820: [mem 0x0000000058388000-0x0000000058c87fff] reserved
+[  +0.000000] BIOS-e820: [mem 0x0000000058c88000-0x000000006ee9dfff] usable
+[  +0.000000] BIOS-e820: [mem 0x000000006ee9e000-0x000000006f09dfff] type 20
+[  +0.000000] BIOS-e820: [mem 0x000000006f09e000-0x000000006f88dfff] reserved
+[  +0.000000] BIOS-e820: [mem 0x000000006f88e000-0x000000006ff7dfff] ACPI NVS
+[  +0.000000] BIOS-e820: [mem 0x000000006ff7e000-0x000000006fffdfff] ACPI data
+[  +0.000000] BIOS-e820: [mem 0x000000006fffe000-0x000000006fffefff] usable
+[  +0.000000] BIOS-e820: [mem 0x000000006ffff000-0x000000007affffff] reserved
+[  +0.000000] BIOS-e820: [mem 0x00000000e0000000-0x00000000efffffff] reserved
+[  +0.000000] BIOS-e820: [mem 0x00000000fd000000-0x00000000fe7fffff] reserved
+[  +0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[  +0.000000] BIOS-e820: [mem 0x00000000fed00000-0x00000000fed00fff] reserved
+[  +0.000000] BIOS-e820: [mem 0x00000000fed10000-0x00000000fed19fff] reserved
+[  +0.000000] BIOS-e820: [mem 0x00000000fed84000-0x00000000fed84fff] reserved
+[  +0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[  +0.000000] BIOS-e820: [mem 0x00000000ffa10000-0x00000000ffffffff] reserved
+[  +0.000000] BIOS-e820: [mem 0x0000000100000000-0x0000000283ffffff] usable
+[  +0.000000] NX (Execute Disable) protection: active
+[  +0.000000] efi: EFI v2.50 by INSYDE Corp.
+[  +0.000000] efi:  ACPI 2.0=0x6fffd014  SMBIOS=0x6f102000  SMBIOS 3.0=0x6f100000  ESRT=0x6f103918  PROP=0x56965b80 
+[  +0.000000] secureboot: Secure boot could not be determined (mode 0)
+[  +0.000000] SMBIOS 3.0.0 present.
+[  +0.000000] DMI: LENOVO 80XL/LNVNB161216, BIOS 4WCN37WW 12/04/2017
+[  +0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[  +0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+[  +0.000000] e820: last_pfn = 0x284000 max_arch_pfn = 0x400000000
+[  +0.000000] MTRR default type: write-back
+[  +0.000000] MTRR fixed ranges enabled:
+[  +0.000000]   00000-9FFFF write-back
+[  +0.000000]   A0000-BFFFF uncachable
+[  +0.000000]   C0000-FFFFF write-protect
+[  +0.000000] MTRR variable ranges enabled:
+[  +0.000000]   0 base 0080000000 mask 7F80000000 uncachable
+[  +0.000000]   1 base 007C000000 mask 7FFC000000 uncachable
+[  +0.000000]   2 base 007A000000 mask 7FFE000000 uncachable
+[  +0.000000]   3 base 0079000000 mask 7FFF000000 uncachable
+[  +0.000000]   4 base 0078800000 mask 7FFF800000 uncachable
+[  +0.000000]   5 disabled
+[  +0.000000]   6 disabled
+[  +0.000000]   7 disabled
+[  +0.000000]   8 disabled
+[  +0.000000]   9 disabled
+[  +0.000000] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[  +0.000000] e820: last_pfn = 0x6ffff max_arch_pfn = 0x400000000
+[  +0.000000] esrt: Reserving ESRT space from 0x000000006f103918 to 0x000000006f1039c8.
+[  +0.000000] Scanning 1 areas for low memory corruption
+[  +0.000000] Base memory trampoline at [        (ptrval)] 98000 size 24576
+[  +0.000000] Using GB pages for direct mapping
+[  +0.000000] BRK [0x1c1b3f000, 0x1c1b3ffff] PGTABLE
+[  +0.000000] BRK [0x1c1b40000, 0x1c1b40fff] PGTABLE
+[  +0.000000] BRK [0x1c1b41000, 0x1c1b41fff] PGTABLE
+[  +0.000000] BRK [0x1c1b42000, 0x1c1b42fff] PGTABLE
+[  +0.000000] BRK [0x1c1b43000, 0x1c1b43fff] PGTABLE
+[  +0.000000] BRK [0x1c1b44000, 0x1c1b44fff] PGTABLE
+[  +0.000000] BRK [0x1c1b45000, 0x1c1b45fff] PGTABLE
+[  +0.000000] BRK [0x1c1b46000, 0x1c1b46fff] PGTABLE
+[  +0.000000] BRK [0x1c1b47000, 0x1c1b47fff] PGTABLE
+[  +0.000000] BRK [0x1c1b48000, 0x1c1b48fff] PGTABLE
+[  +0.000000] BRK [0x1c1b49000, 0x1c1b49fff] PGTABLE
+[  +0.000000] RAMDISK: [mem 0x317f8000-0x34bf3fff]
+[  +0.000000] ACPI: Early table checksum verification disabled
+[  +0.000000] ACPI: RSDP 0x000000006FFFD014 000024 (v02 LENOVO)
+[  +0.000000] ACPI: XSDT 0x000000006FFC8188 00010C (v01 LENOVO CB-01    00000001      01000013)
+[  +0.000000] ACPI: FACP 0x000000006FFEE000 00010C (v05 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: DSDT 0x000000006FFCE000 01CC4A (v02 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: FACS 0x000000006FF5B000 000040
+[  +0.000000] ACPI: UEFI 0x000000006FFFC000 000236 (v01 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: UEFI 0x000000006FFFB000 000042 (v01 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: POAT 0x000000006FFFA000 000055 (v03 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: SSDT 0x000000006FFF9000 0004CE (v02 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: SSDT 0x000000006FFF8000 000046 (v02 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: TPM2 0x000000006FFF7000 000034 (v03 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: SSDT 0x000000006FFF3000 0030F8 (v02 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: ASF! 0x000000006FFF2000 0000A5 (v32 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: ASPT 0x000000006FFF1000 000034 (v07 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: BOOT 0x000000006FFF0000 000028 (v01 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: DBGP 0x000000006FFEF000 000034 (v01 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: HPET 0x000000006FFED000 000038 (v01 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: APIC 0x000000006FFEC000 0000BC (v03 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: MCFG 0x000000006FFEB000 00003C (v01 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: LPIT 0x000000006FFCD000 000094 (v01 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: WSMT 0x000000006FFCC000 000028 (v01 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: SSDT 0x000000006FFCB000 00029F (v02 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: SSDT 0x000000006FFCA000 000346 (v01 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: SSDT 0x000000006FFC9000 000E41 (v02 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: SSDT 0x000000006FFC7000 00051E (v02 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: DBGP 0x000000006FFC6000 000034 (v01 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: DBG2 0x000000006FFC5000 000054 (v00 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: SSDT 0x000000006FFC3000 00106A (v02 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: SSDT 0x000000006FFC2000 000EDE (v02 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: SSDT 0x000000006FFBE000 003502 (v01 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: DMAR 0x000000006FFBD000 0000CC (v01 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: FPDT 0x000000006FFBC000 000044 (v01 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: BGRT 0x000000006FFBB000 000038 (v01 LENOVO CB-01    00000001 ACPI 00040000)
+[  +0.000000] ACPI: Local APIC address 0xfee00000
+[  +0.000000] No NUMA configuration found
+[  +0.000000] Faking a node at [mem 0x0000000000000000-0x0000000283ffffff]
+[  +0.000000] NODE_DATA(0) allocated [mem 0x283fd5000-0x283ffffff]
+[  +0.000000] Zone ranges:
+[  +0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[  +0.000000]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[  +0.000000]   Normal   [mem 0x0000000100000000-0x0000000283ffffff]
+[  +0.000000]   Device   empty
+[  +0.000000] Movable zone start for each node
+[  +0.000000] Early memory node ranges
+[  +0.000000]   node   0: [mem 0x0000000000001000-0x0000000000057fff]
+[  +0.000000]   node   0: [mem 0x0000000000059000-0x000000000009dfff]
+[  +0.000000]   node   0: [mem 0x0000000000100000-0x0000000056968fff]
+[  +0.000000]   node   0: [mem 0x000000005696b000-0x0000000058387fff]
+[  +0.000000]   node   0: [mem 0x0000000058c88000-0x000000006ee9dfff]
+[  +0.000000]   node   0: [mem 0x000000006fffe000-0x000000006fffefff]
+[  +0.000000]   node   0: [mem 0x0000000100000000-0x0000000283ffffff]
+[  +0.000000] Reserved but unavailable: 6855 pages
+[  +0.000000] Initmem setup node 0 [mem 0x0000000000001000-0x0000000283ffffff]
+[  +0.000000] On node 0 totalpages: 2041145
+[  +0.000000]   DMA zone: 64 pages used for memmap
+[  +0.000000]   DMA zone: 22 pages reserved
+[  +0.000000]   DMA zone: 3996 pages, LIFO batch:0
+[  +0.000000]   DMA32 zone: 6999 pages used for memmap
+[  +0.000000]   DMA32 zone: 447901 pages, LIFO batch:31
+[  +0.000000]   Normal zone: 24832 pages used for memmap
+[  +0.000000]   Normal zone: 1589248 pages, LIFO batch:31
+[  +0.000000] Reserving Intel graphics memory at 0x0000000079000000-0x000000007affffff
+[  +0.000000] ACPI: PM-Timer IO Port: 0x1808
+[  +0.000000] ACPI: Local APIC address 0xfee00000
+[  +0.000000] ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+[  +0.000000] ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+[  +0.000000] ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+[  +0.000000] ACPI: LAPIC_NMI (acpi_id[0x04] high edge lint[0x1])
+[  +0.000000] ACPI: LAPIC_NMI (acpi_id[0x05] high edge lint[0x1])
+[  +0.000000] ACPI: LAPIC_NMI (acpi_id[0x06] high edge lint[0x1])
+[  +0.000000] ACPI: LAPIC_NMI (acpi_id[0x07] high edge lint[0x1])
+[  +0.000000] ACPI: LAPIC_NMI (acpi_id[0x08] high edge lint[0x1])
+[  +0.000000] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-119
+[  +0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[  +0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[  +0.000000] ACPI: IRQ0 used by override.
+[  +0.000000] ACPI: IRQ9 used by override.
+[  +0.000000] Using ACPI (MADT) for SMP configuration information
+[  +0.000000] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[  +0.000000] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+[  +0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[  +0.000000] PM: Registered nosave memory: [mem 0x00058000-0x00058fff]
+[  +0.000000] PM: Registered nosave memory: [mem 0x0009e000-0x000fffff]
+[  +0.000000] PM: Registered nosave memory: [mem 0x56969000-0x56969fff]
+[  +0.000000] PM: Registered nosave memory: [mem 0x5696a000-0x5696afff]
+[  +0.000000] PM: Registered nosave memory: [mem 0x58388000-0x58c87fff]
+[  +0.000000] PM: Registered nosave memory: [mem 0x6ee9e000-0x6f09dfff]
+[  +0.000000] PM: Registered nosave memory: [mem 0x6f09e000-0x6f88dfff]
+[  +0.000000] PM: Registered nosave memory: [mem 0x6f88e000-0x6ff7dfff]
+[  +0.000000] PM: Registered nosave memory: [mem 0x6ff7e000-0x6fffdfff]
+[  +0.000000] PM: Registered nosave memory: [mem 0x6ffff000-0x7affffff]
+[  +0.000000] PM: Registered nosave memory: [mem 0x7b000000-0xdfffffff]
+[  +0.000000] PM: Registered nosave memory: [mem 0xe0000000-0xefffffff]
+[  +0.000000] PM: Registered nosave memory: [mem 0xf0000000-0xfcffffff]
+[  +0.000000] PM: Registered nosave memory: [mem 0xfd000000-0xfe7fffff]
+[  +0.000000] PM: Registered nosave memory: [mem 0xfe800000-0xfebfffff]
+[  +0.000000] PM: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+[  +0.000000] PM: Registered nosave memory: [mem 0xfec01000-0xfecfffff]
+[  +0.000000] PM: Registered nosave memory: [mem 0xfed00000-0xfed00fff]
+[  +0.000000] PM: Registered nosave memory: [mem 0xfed01000-0xfed0ffff]
+[  +0.000000] PM: Registered nosave memory: [mem 0xfed10000-0xfed19fff]
+[  +0.000000] PM: Registered nosave memory: [mem 0xfed1a000-0xfed83fff]
+[  +0.000000] PM: Registered nosave memory: [mem 0xfed84000-0xfed84fff]
+[  +0.000000] PM: Registered nosave memory: [mem 0xfed85000-0xfedfffff]
+[  +0.000000] PM: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+[  +0.000000] PM: Registered nosave memory: [mem 0xfee01000-0xffa0ffff]
+[  +0.000000] PM: Registered nosave memory: [mem 0xffa10000-0xffffffff]
+[  +0.000000] e820: [mem 0x7b000000-0xdfffffff] available for PCI devices
+[  +0.000000] Booting paravirtualized kernel on bare hardware
+[  +0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[  +0.000000] random: get_random_bytes called from start_kernel+0x99/0x51b with crng_init=0
+[  +0.000000] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+[  +0.000000] percpu: Embedded 46 pages/cpu @        (ptrval) s151552 r8192 d28672 u524288
+[  +0.000000] pcpu-alloc: s151552 r8192 d28672 u524288 alloc=1*2097152
+[  +0.000000] pcpu-alloc: [0] 0 1 2 3 
+[  +0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 2009228
+[  +0.000000] Policy zone: Normal
+[  +0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-4.15.0-47-generic root=UUID=46f04cb9-7c7a-48eb-b2ee-51fe8b48198c ro quiet splash vt.handoff=7
+[  +0.000000] Calgary: detecting Calgary via BIOS EBDA area
+[  +0.000000] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+[  +0.000000] Memory: 7826540K/8164580K available (12300K kernel code, 2472K rwdata, 4264K rodata, 2408K init, 2416K bss, 338040K reserved, 0K cma-reserved)
+[  +0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[  +0.000000] Kernel/User page tables isolation: enabled
+[  +0.000000] ftrace: allocating 39212 entries in 154 pages
+[  +0.000000] Hierarchical RCU implementation.
+[  +0.000000] 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=4.
+[  +0.000000] 	Tasks RCU enabled.
+[  +0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[  +0.000000] NR_IRQS: 524544, nr_irqs: 1024, preallocated irqs: 16
+[  +0.000000] vt handoff: transparent VT on vt#7
+[  +0.000000] Console: colour dummy device 80x25
+[  +0.000000] console [tty0] enabled
+[  +0.000000] ACPI: Core revision 20170831
+[  +0.000000] ACPI: 11 ACPI AML tables successfully acquired and loaded
+[  +0.000000] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635855245 ns
+[  +0.000000] hpet clockevent registered
+[  +0.000000] APIC: Switch to symmetric I/O mode setup
+[  +0.000000] DMAR: Host address width 39
+[  +0.000000] DMAR: DRHD base: 0x000000fed90000 flags: 0x0
+[  +0.000000] DMAR: dmar0: reg_base_addr fed90000 ver 1:0 cap 1c0000c40660462 ecap 19e2ff0505e
+[  +0.000000] DMAR: DRHD base: 0x000000fed91000 flags: 0x1
+[  +0.000000] DMAR: dmar1: reg_base_addr fed91000 ver 1:0 cap d2008c40660462 ecap f050da
+[  +0.000000] DMAR: RMRR base: 0x0000006f782000 end: 0x0000006f7a1fff
+[  +0.000000] DMAR: RMRR base: 0x00000078800000 end: 0x0000007affffff
+[  +0.000000] DMAR: ANDD device: 1 name: \_SB.PCI0.I2C0
+[  +0.000000] DMAR-IR: IOAPIC id 2 under DRHD base  0xfed91000 IOMMU 1
+[  +0.000000] DMAR-IR: HPET id 0 under DRHD base 0xfed91000
+[  +0.000000] DMAR-IR: Queued invalidation will be enabled to support x2apic and Intr-remapping.
+[  +0.000000] DMAR-IR: Enabled IRQ remapping in x2apic mode
+[  +0.000000] x2apic enabled
+[  +0.000000] Switched APIC routing to cluster x2apic.
+[  +0.004000] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[  +0.020000] tsc: Detected 2700.000 MHz processor
+[  +0.000000] tsc: Detected 2712.000 MHz TSC
+[  +0.000000] Calibrating delay loop (skipped), value calculated using timer frequency.. 5424.00 BogoMIPS (lpj=10848000)
+[  +0.000000] pid_max: default: 32768 minimum: 301
+[  +0.000000] Security Framework initialized
+[  +0.000000] Yama: becoming mindful.
+[  +0.000000] AppArmor: AppArmor initialized
+[  +0.000000] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes)
+[  +0.000000] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[  +0.000000] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes)
+[  +0.000000] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes)
+[  +0.000000] mce: CPU supports 8 MCE banks
+[  +0.000000] CPU0: Thermal monitoring enabled (TM1)
+[  +0.000000] process: using mwait in idle threads
+[  +0.000000] Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
+[  +0.000000] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+[  +0.000000] Spectre V2 : Mitigation: Full generic retpoline
+[  +0.000000] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[  +0.000000] Spectre V2 : Spectre v2 mitigation: Enabling Indirect Branch Prediction Barrier
+[  +0.000000] Spectre V2 : Enabling Restricted Speculation for firmware calls
+[  +0.000000] Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl and seccomp
+[  +0.010388] Freeing SMP alternatives memory: 36K
+[  +0.003107] TSC deadline timer enabled
+[  +0.000004] smpboot: CPU0: Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz (family: 0x6, model: 0x8e, stepping: 0x9)
+[  +0.000065] Performance Events: PEBS fmt3+, Skylake events, 32-deep LBR, full-width counters, Intel PMU driver.
+[  +0.000033] ... version:                4
+[  +0.000001] ... bit width:              48
+[  +0.000000] ... generic registers:      4
+[  +0.000001] ... value mask:             0000ffffffffffff
+[  +0.000001] ... max period:             00007fffffffffff
+[  +0.000000] ... fixed-purpose events:   3
+[  +0.000001] ... event mask:             000000070000000f
+[  +0.000037] Hierarchical SRCU implementation.
+[  +0.000985] NMI watchdog: Enabled. Permanently consumes one hw-PMU counter.
+[  +0.000012] smp: Bringing up secondary CPUs ...
+[  +0.000072] x86: Booting SMP configuration:
+[  +0.000001] .... node  #0, CPUs:      #1 #2 #3
+[  +0.000720] smp: Brought up 1 node, 4 CPUs
+[  +0.000000] smpboot: Max logical packages: 1
+[  +0.000000] smpboot: Total of 4 processors activated (21696.00 BogoMIPS)
+[  +0.000833] devtmpfs: initialized
+[  +0.000000] x86/mm: Memory block size: 128MB
+[  +0.000382] evm: security.selinux
+[  +0.000001] evm: security.SMACK64
+[  +0.000000] evm: security.SMACK64EXEC
+[  +0.000001] evm: security.SMACK64TRANSMUTE
+[  +0.000000] evm: security.SMACK64MMAP
+[  +0.000001] evm: security.apparmor
+[  +0.000000] evm: security.ima
+[  +0.000001] evm: security.capability
+[  +0.000013] PM: Registering ACPI NVS region [mem 0x56969000-0x56969fff] (4096 bytes)
+[  +0.000000] PM: Registering ACPI NVS region [mem 0x6f88e000-0x6ff7dfff] (7274496 bytes)
+[  +0.000000] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[  +0.000000] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[  +0.000000] pinctrl core: initialized pinctrl subsystem
+[  +0.000000] RTC time: 16:27:14, date: 04/27/19
+[  +0.000455] NET: Registered protocol family 16
+[  +0.000083] audit: initializing netlink subsys (disabled)
+[  +0.000005] audit: type=2000 audit(1556382433.044:1): state=initialized audit_enabled=0 res=1
+[  +0.000000] cpuidle: using governor ladder
+[  +0.000000] cpuidle: using governor menu
+[  +0.000000] Simple Boot Flag at 0x44 set to 0x1
+[  +0.000000] ACPI FADT declares the system doesn't support PCIe ASPM, so disable it
+[  +0.000000] ACPI: bus type PCI registered
+[  +0.000000] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[  +0.000000] PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xe0000000-0xefffffff] (base 0xe0000000)
+[  +0.000000] PCI: MMCONFIG at [mem 0xe0000000-0xefffffff] reserved in E820
+[  +0.000000] PCI: Using configuration type 1 for base access
+[  +0.002816] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[  +0.000000] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[  +0.000046] ACPI: Added _OSI(Module Device)
+[  +0.000000] ACPI: Added _OSI(Processor Device)
+[  +0.000001] ACPI: Added _OSI(3.0 _SCP Extensions)
+[  +0.000001] ACPI: Added _OSI(Processor Aggregator Device)
+[  +0.000001] ACPI: Added _OSI(Linux-Dell-Video)
+[  +0.000001] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[  +0.000000] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[  +0.001230] ACPI: Executed 28 blocks of module-level executable AML code
+[  +0.013788] ACPI: [Firmware Bug]: BIOS _OSI(Linux) query ignored
+[  +0.005109] ACPI: Dynamic OEM Table Load:
+[  +0.000015] ACPI: SSDT 0xFFFF95307A2C5800 0006B4 (v02 PmRef  Cpu0Ist  00003000 INTL 20160527)
+[  +0.000294] ACPI: Executed 1 blocks of module-level executable AML code
+[  +0.000105] ACPI: \_PR_.CPU0: _OSC native thermal LVT Acked
+[  +0.001175] ACPI: Dynamic OEM Table Load:
+[  +0.000007] ACPI: SSDT 0xFFFF953079D2E800 0003FF (v02 PmRef  Cpu0Cst  00003001 INTL 20160527)
+[  +0.000262] ACPI: Executed 1 blocks of module-level executable AML code
+[  +0.000205] ACPI: Dynamic OEM Table Load:
+[  +0.000007] ACPI: SSDT 0xFFFF953079D5F400 000115 (v02 PmRef  Cpu0Hwp  00003000 INTL 20160527)
+[  +0.000214] ACPI: Executed 1 blocks of module-level executable AML code
+[  +0.000106] ACPI: Dynamic OEM Table Load:
+[  +0.000006] ACPI: SSDT 0xFFFF953079D5F000 0001A4 (v02 PmRef  HwpLvt   00003000 INTL 20160527)
+[  +0.000211] ACPI: Executed 1 blocks of module-level executable AML code
+[  +0.000556] ACPI: Dynamic OEM Table Load:
+[  +0.000008] ACPI: SSDT 0xFFFF95307A2C4800 00065C (v02 PmRef  ApIst    00003000 INTL 20160527)
+[  +0.000619] ACPI: Executed 1 blocks of module-level executable AML code
+[  +0.000196] ACPI: Dynamic OEM Table Load:
+[  +0.000007] ACPI: SSDT 0xFFFF953079D5F800 000197 (v02 PmRef  ApHwp    00003000 INTL 20160527)
+[  +0.000266] ACPI: Executed 1 blocks of module-level executable AML code
+[  +0.000203] ACPI: Dynamic OEM Table Load:
+[  +0.000006] ACPI: SSDT 0xFFFF953079D5E200 00018A (v02 PmRef  ApCst    00003000 INTL 20160527)
+[  +0.000264] ACPI: Executed 1 blocks of module-level executable AML code
+[  +0.001714] ACPI: EC: EC started
+[  +0.000001] ACPI: EC: interrupt blocked
+[  +0.000318] ACPI: \_SB_.PCI0.LPCB.EC0_: Used as first EC
+[  +0.000002] ACPI: \_SB_.PCI0.LPCB.EC0_: GPE=0x4f, EC_CMD/EC_SC=0x66, EC_DATA=0x62
+[  +0.000001] ACPI: \_SB_.PCI0.LPCB.EC0_: Used as boot DSDT EC to handle transactions
+[  +0.000001] ACPI: Interpreter enabled
+[  +0.000068] ACPI: (supports S0 S3 S4 S5)
+[  +0.000001] ACPI: Using IOAPIC for interrupt routing
+[  +0.000044] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[  +0.000646] ACPI: Enabled 6 GPEs in block 00 to 7F
+[  +0.006433] ACPI: Power Resource [PC01] (on)
+[  +0.000463] ACPI: Power Resource [WRST] (on)
+[  +0.000482] ACPI: Power Resource [WRST] (on)
+[  +0.000427] ACPI: Power Resource [WRST] (on)
+[  +0.000426] ACPI: Power Resource [WRST] (on)
+[  +0.000435] ACPI: Power Resource [WRST] (on)
+[  +0.000428] ACPI: Power Resource [WRST] (on)
+[  +0.000426] ACPI: Power Resource [WRST] (on)
+[  +0.000426] ACPI: Power Resource [WRST] (on)
+[  +0.000426] ACPI: Power Resource [WRST] (on)
+[  +0.000427] ACPI: Power Resource [WRST] (on)
+[  +0.000427] ACPI: Power Resource [WRST] (on)
+[  +0.000428] ACPI: Power Resource [WRST] (on)
+[  +0.000412] ACPI: Power Resource [WRST] (on)
+[  +0.000415] ACPI: Power Resource [WRST] (on)
+[  +0.000414] ACPI: Power Resource [WRST] (on)
+[  +0.000414] ACPI: Power Resource [WRST] (on)
+[  +0.000418] ACPI: Power Resource [WRST] (on)
+[  +0.000414] ACPI: Power Resource [WRST] (on)
+[  +0.000422] ACPI: Power Resource [WRST] (on)
+[  +0.000413] ACPI: Power Resource [WRST] (on)
+[  +0.011219] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-fe])
+[  +0.000005] acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+[  +0.003162] acpi PNP0A08:00: _OSC: OS now controls [PCIeHotplug PME AER PCIeCapability]
+[  +0.000001] acpi PNP0A08:00: FADT indicates ASPM is unsupported, using BIOS configuration
+[  +0.002330] PCI host bridge to bus 0000:00
+[  +0.000002] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[  +0.000002] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[  +0.000001] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[  +0.000001] pci_bus 0000:00: root bus resource [mem 0x000c0000-0x000c3fff window]
+[  +0.000002] pci_bus 0000:00: root bus resource [mem 0x000c4000-0x000c7fff window]
+[  +0.000001] pci_bus 0000:00: root bus resource [mem 0x000c8000-0x000cbfff window]
+[  +0.000001] pci_bus 0000:00: root bus resource [mem 0x000cc000-0x000cffff window]
+[  +0.000001] pci_bus 0000:00: root bus resource [mem 0x000d0000-0x000d3fff window]
+[  +0.000001] pci_bus 0000:00: root bus resource [mem 0x000d4000-0x000d7fff window]
+[  +0.000002] pci_bus 0000:00: root bus resource [mem 0x000d8000-0x000dbfff window]
+[  +0.000001] pci_bus 0000:00: root bus resource [mem 0x000dc000-0x000dffff window]
+[  +0.000001] pci_bus 0000:00: root bus resource [mem 0x7b000000-0xdfffffff window]
+[  +0.000002] pci_bus 0000:00: root bus resource [mem 0xfd000000-0xfe7fffff window]
+[  +0.000001] pci_bus 0000:00: root bus resource [bus 00-fe]
+[  +0.000009] pci 0000:00:00.0: [8086:5904] type 00 class 0x060000
+[  +0.000927] pci 0000:00:02.0: [8086:5916] type 00 class 0x030000
+[  +0.000013] pci 0000:00:02.0: reg 0x10: [mem 0x92000000-0x92ffffff 64bit]
+[  +0.000007] pci 0000:00:02.0: reg 0x18: [mem 0xa0000000-0xafffffff 64bit pref]
+[  +0.000004] pci 0000:00:02.0: reg 0x20: [io  0x5000-0x503f]
+[  +0.000016] pci 0000:00:02.0: BAR 2: assigned to efifb
+[  +0.000981] pci 0000:00:14.0: [8086:9d2f] type 00 class 0x0c0330
+[  +0.000025] pci 0000:00:14.0: reg 0x10: [mem 0x94300000-0x9430ffff 64bit]
+[  +0.000074] pci 0000:00:14.0: PME# supported from D3hot D3cold
+[  +0.001007] pci 0000:00:14.2: [8086:9d31] type 00 class 0x118000
+[  +0.000024] pci 0000:00:14.2: reg 0x10: [mem 0x9432a000-0x9432afff 64bit]
+[  +0.000970] pci 0000:00:15.0: [8086:9d60] type 00 class 0x118000
+[  +0.000032] pci 0000:00:15.0: reg 0x10: [mem 0x9432b000-0x9432bfff 64bit]
+[  +0.001036] pci 0000:00:16.0: [8086:9d3a] type 00 class 0x078000
+[  +0.000029] pci 0000:00:16.0: reg 0x10: [mem 0x9432c000-0x9432cfff 64bit]
+[  +0.000081] pci 0000:00:16.0: PME# supported from D3hot
+[  +0.000944] pci 0000:00:17.0: [8086:9d03] type 00 class 0x010601
+[  +0.000021] pci 0000:00:17.0: reg 0x10: [mem 0x94328000-0x94329fff]
+[  +0.000008] pci 0000:00:17.0: reg 0x14: [mem 0x9432f000-0x9432f0ff]
+[  +0.000009] pci 0000:00:17.0: reg 0x18: [io  0x5080-0x5087]
+[  +0.000008] pci 0000:00:17.0: reg 0x1c: [io  0x5088-0x508b]
+[  +0.000008] pci 0000:00:17.0: reg 0x20: [io  0x5060-0x507f]
+[  +0.000009] pci 0000:00:17.0: reg 0x24: [mem 0x9432d000-0x9432d7ff]
+[  +0.000046] pci 0000:00:17.0: PME# supported from D3hot
+[  +0.000945] pci 0000:00:1c.0: [8086:9d10] type 01 class 0x060400
+[  +0.000077] pci 0000:00:1c.0: PME# supported from D0 D3hot D3cold
+[  +0.000981] pci 0000:00:1c.4: [8086:9d14] type 01 class 0x060400
+[  +0.000077] pci 0000:00:1c.4: PME# supported from D0 D3hot D3cold
+[  +0.000974] pci 0000:00:1c.5: [8086:9d15] type 01 class 0x060400
+[  +0.000077] pci 0000:00:1c.5: PME# supported from D0 D3hot D3cold
+[  +0.000984] pci 0000:00:1f.0: [8086:9d4e] type 00 class 0x060100
+[  +0.001037] pci 0000:00:1f.2: [8086:9d21] type 00 class 0x058000
+[  +0.000018] pci 0000:00:1f.2: reg 0x10: [mem 0x94324000-0x94327fff]
+[  +0.000984] pci 0000:00:1f.3: [8086:9d71] type 00 class 0x040300
+[  +0.000031] pci 0000:00:1f.3: reg 0x10: [mem 0x94320000-0x94323fff 64bit]
+[  +0.000036] pci 0000:00:1f.3: reg 0x20: [mem 0x94310000-0x9431ffff 64bit]
+[  +0.000054] pci 0000:00:1f.3: PME# supported from D3hot D3cold
+[  +0.001000] pci 0000:00:1f.4: [8086:9d23] type 00 class 0x0c0500
+[  +0.000061] pci 0000:00:1f.4: reg 0x10: [mem 0x9432e000-0x9432e0ff 64bit]
+[  +0.000069] pci 0000:00:1f.4: reg 0x20: [io  0x5040-0x505f]
+[  +0.001050] pci 0000:01:00.0: [10de:134f] type 00 class 0x030200
+[  +0.000027] pci 0000:01:00.0: reg 0x10: [mem 0x93000000-0x93ffffff]
+[  +0.000013] pci 0000:01:00.0: reg 0x14: [mem 0x80000000-0x8fffffff 64bit pref]
+[  +0.000014] pci 0000:01:00.0: reg 0x1c: [mem 0x90000000-0x91ffffff 64bit pref]
+[  +0.000009] pci 0000:01:00.0: reg 0x24: [io  0x4000-0x407f]
+[  +0.000009] pci 0000:01:00.0: reg 0x30: [mem 0xfff80000-0xffffffff pref]
+[  +0.000183] pci 0000:00:1c.0: PCI bridge to [bus 01]
+[  +0.000003] pci 0000:00:1c.0:   bridge window [io  0x4000-0x4fff]
+[  +0.000003] pci 0000:00:1c.0:   bridge window [mem 0x93000000-0x93ffffff]
+[  +0.000005] pci 0000:00:1c.0:   bridge window [mem 0x80000000-0x91ffffff 64bit pref]
+[  +0.000060] pci 0000:02:00.0: [10ec:8168] type 00 class 0x020000
+[  +0.000032] pci 0000:02:00.0: reg 0x10: [io  0x3000-0x30ff]
+[  +0.000029] pci 0000:02:00.0: reg 0x18: [mem 0x94204000-0x94204fff 64bit]
+[  +0.000018] pci 0000:02:00.0: reg 0x20: [mem 0x94200000-0x94203fff 64bit]
+[  +0.000108] pci 0000:02:00.0: supports D1 D2
+[  +0.000002] pci 0000:02:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+[  +0.009379] pci 0000:00:1c.4: PCI bridge to [bus 02]
+[  +0.000024] pci 0000:00:1c.4:   bridge window [io  0x3000-0x3fff]
+[  +0.000003] pci 0000:00:1c.4:   bridge window [mem 0x94200000-0x942fffff]
+[  +0.000124] pci 0000:03:00.0: [168c:0042] type 00 class 0x028000
+[  +0.000069] pci 0000:03:00.0: reg 0x10: [mem 0x94000000-0x941fffff 64bit]
+[  +0.000249] pci 0000:03:00.0: PME# supported from D0 D3hot D3cold
+[  +0.011636] pci 0000:00:1c.5: PCI bridge to [bus 03]
+[  +0.000005] pci 0000:00:1c.5:   bridge window [mem 0x94000000-0x941fffff]
+[  +0.002912] ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 6 10 *11 12 14 15)
+[  +0.000075] ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 5 6 *10 11 12 14 15)
+[  +0.000073] ACPI: PCI Interrupt Link [LNKC] (IRQs 3 4 5 6 10 *11 12 14 15)
+[  +0.000073] ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 5 6 10 *11 12 14 15)
+[  +0.000073] ACPI: PCI Interrupt Link [LNKE] (IRQs 3 4 5 6 10 *11 12 14 15)
+[  +0.000071] ACPI: PCI Interrupt Link [LNKF] (IRQs 3 4 5 6 10 *11 12 14 15)
+[  +0.000072] ACPI: PCI Interrupt Link [LNKG] (IRQs 3 4 5 6 10 *11 12 14 15)
+[  +0.000072] ACPI: PCI Interrupt Link [LNKH] (IRQs 3 4 5 6 10 *11 12 14 15)
+[  +0.000353] platform MSFT0101:00: failed to claim resource 1: [mem 0xfed40000-0xfed40fff]
+[  +0.000004] acpi MSFT0101:00: platform device creation failed: -16
+[  +0.000305] ACPI: EC: interrupt unblocked
+[  +0.000015] ACPI: EC: event unblocked
+[  +0.000012] ACPI: \_SB_.PCI0.LPCB.EC0_: GPE=0x4f, EC_CMD/EC_SC=0x66, EC_DATA=0x62
+[  +0.000002] ACPI: \_SB_.PCI0.LPCB.EC0_: Used as boot DSDT EC to handle transactions and events
+[  +0.000230] SCSI subsystem initialized
+[  +0.000013] libata version 3.00 loaded.
+[  +0.000000] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[  +0.000000] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[  +0.000000] pci 0000:00:02.0: vgaarb: bridge control possible
+[  +0.000000] vgaarb: loaded
+[  +0.000000] ACPI: bus type USB registered
+[  +0.000000] usbcore: registered new interface driver usbfs
+[  +0.000000] usbcore: registered new interface driver hub
+[  +0.000000] usbcore: registered new device driver usb
+[  +0.000000] EDAC MC: Ver: 3.0.0
+[  +0.000000] Registered efivars operations
+[  +0.047489] PCI: Using ACPI for IRQ routing
+[  +0.030836] PCI: pci_cache_line_size set to 64 bytes
+[  +0.000107] e820: reserve RAM buffer [mem 0x00058000-0x0005ffff]
+[  +0.000005] e820: reserve RAM buffer [mem 0x0009e000-0x0009ffff]
+[  +0.000001] e820: reserve RAM buffer [mem 0x56969000-0x57ffffff]
+[  +0.000001] e820: reserve RAM buffer [mem 0x58388000-0x5bffffff]
+[  +0.000001] e820: reserve RAM buffer [mem 0x6ee9e000-0x6fffffff]
+[  +0.000001] e820: reserve RAM buffer [mem 0x6ffff000-0x6fffffff]
+[  +0.000095] NetLabel: Initializing
+[  +0.000001] NetLabel:  domain hash size = 128
+[  +0.000000] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[  +0.000015] NetLabel:  unlabeled traffic allowed by default
+[  +0.000013] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0
+[  +0.000000] hpet0: 8 comparators, 64-bit 24.000000 MHz counter
+[  +0.001925] clocksource: Switched to clocksource hpet
+[  +0.008169] VFS: Disk quotas dquot_6.6.0
+[  +0.000015] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[  +0.000088] AppArmor: AppArmor Filesystem Enabled
+[  +0.000023] pnp: PnP ACPI init
+[  +0.000152] system 00:00: [mem 0xfd000000-0xfdabffff] has been reserved
+[  +0.000002] system 00:00: [mem 0xfdad0000-0xfdadffff] has been reserved
+[  +0.000002] system 00:00: [mem 0xfdb00000-0xfdffffff] has been reserved
+[  +0.000001] system 00:00: [mem 0xfe000000-0xfe01ffff] has been reserved
+[  +0.000002] system 00:00: [mem 0xfe036000-0xfe03bfff] has been reserved
+[  +0.000001] system 00:00: [mem 0xfe03d000-0xfe3fffff] has been reserved
+[  +0.000002] system 00:00: [mem 0xfe410000-0xfe7fffff] has been reserved
+[  +0.000016] system 00:00: Plug and Play ACPI device, IDs PNP0c02 (active)
+[  +0.000391] system 00:01: [io  0x2000-0x20fe] has been reserved
+[  +0.000004] system 00:01: Plug and Play ACPI device, IDs PNP0c02 (active)
+[  +0.000240] system 00:02: [io  0x0680-0x069f] has been reserved
+[  +0.000001] system 00:02: [io  0xffff] has been reserved
+[  +0.000002] system 00:02: [io  0xffff] has been reserved
+[  +0.000001] system 00:02: [io  0xffff] has been reserved
+[  +0.000002] system 00:02: [io  0x1800-0x18fe] has been reserved
+[  +0.000001] system 00:02: [io  0x164e-0x164f] has been reserved
+[  +0.000004] system 00:02: Plug and Play ACPI device, IDs PNP0c02 (active)
+[  +0.000111] pnp 00:03: Plug and Play ACPI device, IDs PNP0b00 (active)
+[  +0.000039] system 00:04: [io  0x1854-0x1857] has been reserved
+[  +0.000003] system 00:04: Plug and Play ACPI device, IDs INT3f0d PNP0c02 (active)
+[  +0.000046] pnp 00:05: Plug and Play ACPI device, IDs PNP0303 (active)
+[  +0.001374] system 00:06: [mem 0xfe029000-0xfe029fff] has been reserved
+[  +0.000002] system 00:06: [mem 0xfe028000-0xfe028fff] has been reserved
+[  +0.000003] system 00:06: Plug and Play ACPI device, IDs PNP0c02 (active)
+[  +0.000629] system 00:07: [mem 0xfed10000-0xfed17fff] has been reserved
+[  +0.000002] system 00:07: [mem 0xfed18000-0xfed18fff] has been reserved
+[  +0.000001] system 00:07: [mem 0xfed19000-0xfed19fff] has been reserved
+[  +0.000002] system 00:07: [mem 0xe0000000-0xefffffff] has been reserved
+[  +0.000001] system 00:07: [mem 0xfed20000-0xfed3ffff] has been reserved
+[  +0.000002] system 00:07: [mem 0xfed90000-0xfed93fff] could not be reserved
+[  +0.000001] system 00:07: [mem 0xfed45000-0xfed8ffff] could not be reserved
+[  +0.000002] system 00:07: [mem 0xff000000-0xffffffff] could not be reserved
+[  +0.000001] system 00:07: [mem 0xfee00000-0xfeefffff] could not be reserved
+[  +0.000002] system 00:07: [mem 0x7b000000-0x7b01ffff] has been reserved
+[  +0.000004] system 00:07: Plug and Play ACPI device, IDs PNP0c02 (active)
+[  +0.000380] pnp: PnP ACPI: found 8 devices
+[  +0.007595] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[  +0.000004] pci 0000:01:00.0: can't claim BAR 6 [mem 0xfff80000-0xffffffff pref]: no compatible bridge window
+[  +0.000035] pci 0000:01:00.0: BAR 6: no space for [mem size 0x00080000 pref]
+[  +0.000003] pci 0000:01:00.0: BAR 6: failed to assign [mem size 0x00080000 pref]
+[  +0.000004] pci 0000:00:1c.0: PCI bridge to [bus 01]
+[  +0.000002] pci 0000:00:1c.0:   bridge window [io  0x4000-0x4fff]
+[  +0.000004] pci 0000:00:1c.0:   bridge window [mem 0x93000000-0x93ffffff]
+[  +0.000003] pci 0000:00:1c.0:   bridge window [mem 0x80000000-0x91ffffff 64bit pref]
+[  +0.000005] pci 0000:00:1c.4: PCI bridge to [bus 02]
+[  +0.000002] pci 0000:00:1c.4:   bridge window [io  0x3000-0x3fff]
+[  +0.000004] pci 0000:00:1c.4:   bridge window [mem 0x94200000-0x942fffff]
+[  +0.000006] pci 0000:00:1c.5: PCI bridge to [bus 03]
+[  +0.000004] pci 0000:00:1c.5:   bridge window [mem 0x94000000-0x941fffff]
+[  +0.000007] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[  +0.000001] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[  +0.000002] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[  +0.000001] pci_bus 0000:00: resource 7 [mem 0x000c0000-0x000c3fff window]
+[  +0.000001] pci_bus 0000:00: resource 8 [mem 0x000c4000-0x000c7fff window]
+[  +0.000002] pci_bus 0000:00: resource 9 [mem 0x000c8000-0x000cbfff window]
+[  +0.000001] pci_bus 0000:00: resource 10 [mem 0x000cc000-0x000cffff window]
+[  +0.000001] pci_bus 0000:00: resource 11 [mem 0x000d0000-0x000d3fff window]
+[  +0.000002] pci_bus 0000:00: resource 12 [mem 0x000d4000-0x000d7fff window]
+[  +0.000001] pci_bus 0000:00: resource 13 [mem 0x000d8000-0x000dbfff window]
+[  +0.000001] pci_bus 0000:00: resource 14 [mem 0x000dc000-0x000dffff window]
+[  +0.000002] pci_bus 0000:00: resource 15 [mem 0x7b000000-0xdfffffff window]
+[  +0.000001] pci_bus 0000:00: resource 16 [mem 0xfd000000-0xfe7fffff window]
+[  +0.000001] pci_bus 0000:01: resource 0 [io  0x4000-0x4fff]
+[  +0.000001] pci_bus 0000:01: resource 1 [mem 0x93000000-0x93ffffff]
+[  +0.000002] pci_bus 0000:01: resource 2 [mem 0x80000000-0x91ffffff 64bit pref]
+[  +0.000001] pci_bus 0000:02: resource 0 [io  0x3000-0x3fff]
+[  +0.000001] pci_bus 0000:02: resource 1 [mem 0x94200000-0x942fffff]
+[  +0.000002] pci_bus 0000:03: resource 1 [mem 0x94000000-0x941fffff]
+[  +0.000167] NET: Registered protocol family 2
+[  +0.000159] TCP established hash table entries: 65536 (order: 7, 524288 bytes)
+[  +0.000114] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+[  +0.000113] TCP: Hash tables configured (established 65536 bind 65536)
+[  +0.000026] UDP hash table entries: 4096 (order: 5, 131072 bytes)
+[  +0.000020] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes)
+[  +0.000043] NET: Registered protocol family 1
+[  +0.000012] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[  +0.001665] PCI: CLS 64 bytes, default 64
+[  +0.000030] Unpacking initramfs...
+[  +0.776905] Freeing initrd memory: 53232K
+[  +0.000033] DMAR: ACPI device "device:6e" under DMAR at fed91000 as 00:15.0
+[  +0.000013] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[  +0.000003] software IO TLB [mem 0x6a932000-0x6e932000] (64MB) mapped at [        (ptrval)-        (ptrval)]
+[  +0.000188] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2717868ea45, max_idle_ns: 440795316085 ns
+[  +0.000161] Scanning for low memory corruption every 60 seconds
+[  +0.000674] Initialise system trusted keyrings
+[  +0.000007] Key type blacklist registered
+[  +0.000061] workingset: timestamp_bits=36 max_order=21 bucket_order=0
+[  +0.000988] zbud: loaded
+[  +0.000555] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[  +0.000162] fuse init (API version 7.26)
+[  +0.003747] Key type asymmetric registered
+[  +0.000001] Asymmetric key parser 'x509' registered
+[  +0.000032] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[  +0.000072] io scheduler noop registered
+[  +0.000001] io scheduler deadline registered
+[  +0.000023] io scheduler cfq registered (default)
+[  +0.000831] pcieport 0000:00:1c.0: Signaling PME with IRQ 122
+[  +0.000015] pcieport 0000:00:1c.4: Signaling PME with IRQ 123
+[  +0.000013] pcieport 0000:00:1c.5: Signaling PME with IRQ 124
+[  +0.000054] efifb: probing for efifb
+[  +0.000015] efifb: framebuffer at 0xa0000000, using 8128k, total 8128k
+[  +0.000001] efifb: mode is 1920x1080x32, linelength=7680, pages=1
+[  +0.000000] efifb: scrolling: redraw
+[  +0.000001] efifb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+[  +0.000111] Console: switching to colour frame buffer device 240x67
+[  +0.000024] fb0: EFI VGA frame buffer device
+[  +0.000007] intel_idle: MWAIT substates: 0x11142120
+[  +0.000001] intel_idle: v0.4.1 model 0x8E
+[  +0.000247] intel_idle: lapic_timer_reliable_states 0xffffffff
+[  +0.000128] ACPI: AC Adapter [ADP0] (on-line)
+[  +0.000069] input: Lid Switch as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0D:00/input/input0
+[  +0.000010] ACPI: Lid Switch [LID0]
+[  +0.000025] input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input1
+[  +0.000009] ACPI: Power Button [PWRB]
+[  +0.001197] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[  +0.002583] Linux agpgart interface v0.103
+[  +0.029722] loop: module loaded
+[  +0.000145] libphy: Fixed MDIO Bus: probed
+[  +0.000001] tun: Universal TUN/TAP device driver, 1.6
+[  +0.000065] PPP generic driver version 2.4.2
+[  +0.000060] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[  +0.000002] ehci-pci: EHCI PCI platform driver
+[  +0.000008] ehci-platform: EHCI generic platform driver
+[  +0.000008] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[  +0.000001] ohci-pci: OHCI PCI platform driver
+[  +0.000006] ohci-platform: OHCI generic platform driver
+[  +0.000005] uhci_hcd: USB Universal Host Controller Interface driver
+[  +0.000176] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[  +0.000005] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 1
+[  +0.001092] xhci_hcd 0000:00:14.0: hcc params 0x200077c1 hci version 0x100 quirks 0x0000000000109810
+[  +0.000004] xhci_hcd 0000:00:14.0: cache line size of 64 is not supported
+[  +0.000147] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[  +0.000001] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  +0.000002] usb usb1: Product: xHCI Host Controller
+[  +0.000001] usb usb1: Manufacturer: Linux 4.15.0-47-generic xhci-hcd
+[  +0.000001] usb usb1: SerialNumber: 0000:00:14.0
+[  +0.000116] hub 1-0:1.0: USB hub found
+[  +0.000015] hub 1-0:1.0: 12 ports detected
+[  +0.000416] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[  +0.000003] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 2
+[  +0.000003] xhci_hcd 0000:00:14.0: Host supports USB 3.0  SuperSpeed
+[  +0.000027] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[  +0.000002] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[  +0.000001] usb usb2: Product: xHCI Host Controller
+[  +0.000001] usb usb2: Manufacturer: Linux 4.15.0-47-generic xhci-hcd
+[  +0.000002] usb usb2: SerialNumber: 0000:00:14.0
+[  +0.000111] hub 2-0:1.0: USB hub found
+[  +0.000011] hub 2-0:1.0: 6 ports detected
+[  +0.000147] usb: port power management may be unreliable
+[  +0.000387] i8042: PNP: PS/2 Controller [PNP0303:PS2K] at 0x60,0x64 irq 1
+[  +0.000001] i8042: PNP: PS/2 appears to have AUX port disabled, if this is incorrect please boot with i8042.nopnp
+[  +0.007940] serio: i8042 KBD port at 0x60,0x64 irq 1
+[  +0.000218] mousedev: PS/2 mouse device common for all mice
+[  +0.000516] rtc_cmos 00:03: RTC can wake from S4
+[  +0.000395] rtc_cmos 00:03: rtc core: registered rtc_cmos as rtc0
+[  +0.000084] rtc_cmos 00:03: alarms up to one month, y3k, 242 bytes nvram, hpet irqs
+[  +0.000007] i2c /dev entries driver
+[  +0.000003] pcie_mp2_amd: AMD(R) PCI-E MP2 Communication Driver Version: 1.0
+[  +0.000060] device-mapper: uevent: version 1.0.3
+[  +0.000077] device-mapper: ioctl: 4.37.0-ioctl (2017-09-20) initialised: dm-devel@redhat.com
+[  +0.000002] intel_pstate: Intel P-state driver initializing
+[  +0.000438] intel_pstate: HWP enabled
+[  +0.000100] ledtrig-cpu: registered to indicate activity on CPUs
+[  +0.000002] EFI Variables Facility v0.08 2004-May-17
+[  +0.010786] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[  +0.035671] intel_pmc_core:  initialized
+[  +0.000175] NET: Registered protocol family 10
+[  +0.003354] ACPI: Battery Slot [BAT0] (battery present)
+[  +0.000825] Segment Routing with IPv6
+[  +0.000016] NET: Registered protocol family 17
+[  +0.000068] Key type dns_resolver registered
+[  +0.000625] RAS: Correctable Errors collector initialized.
+[  +0.000088] microcode: sig=0x806e9, pf=0x80, revision=0x8e
+[  +0.000244] microcode: Microcode Update Driver: v2.2.
+[  +0.000009] sched_clock: Marking stable (1134145954, 0)->(1117331043, 16814911)
+[  +0.000397] registered taskstats version 1
+[  +0.000006] Loading compiled-in X.509 certificates
+[  +0.001929] Loaded X.509 cert 'Build time autogenerated kernel key: 3b5de4494257742697836784b80a5bf0e60d847e'
+[  +0.001802] Loaded UEFI:db cert 'Microsoft Windows Production PCA 2011: a92902398e16c49778cd90f99e4f9ae17c55af53' linked to secondary sys keyring
+[  +0.000017] Loaded UEFI:db cert 'Microsoft Corporation UEFI CA 2011: 13adbf4309bd82709c8cd54f316ed522988a1bd4' linked to secondary sys keyring
+[  +0.000009] Loaded UEFI:db cert '4W320-14IKB: 8dcee6331cb26082429338acdf6278f7' linked to secondary sys keyring
+[  +0.000003] Problem loading UEFI:db X.509 certificate (-65)
+[  +0.002192] Loaded UEFI:MokListRT cert 'Canonical Ltd. Master Certificate Authority: ad91990bc22ab1f517048c23b6655a268e345a63' linked to secondary sys keyring
+[  +0.001485] zswap: loaded using pool lzo/zbud
+[  +0.003479] Key type big_key registered
+[  +0.000003] Key type trusted registered
+[  +0.001286] Key type encrypted registered
+[  +0.000002] AppArmor: AppArmor sha1 policy hashing enabled
+[  +0.006466] ima: Allocated hash algorithm: sha1
+[  +0.063669] evm: HMAC attrs: 0x1
+[  +0.000936]   Magic number: 15:639:490
+[  +0.000220] rtc_cmos 00:03: setting system clock to 2019-04-27 16:27:15 UTC (1556382435)
+[  +0.000110] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+[  +0.000000] EDD information not available.
+[  +0.189893] usb 1-1: new low-speed USB device number 2 using xhci_hcd
+[  +0.151733] usb 1-1: New USB device found, idVendor=10c4, idProduct=8105
+[  +0.000001] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000002] usb 1-1: Product: USB OPTICAL MOUSE
+[  +0.000001] usb 1-1: Manufacturer: YSPRINGTECH
+[  +0.026775] Freeing unused kernel memory: 2408K
+[  +0.006040] Write protecting the kernel read-only data: 20480k
+[  +0.001109] Freeing unused kernel memory: 2008K
+[  +0.002893] Freeing unused kernel memory: 1880K
+[  +0.005268] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[  +0.000001] x86/mm: Checking user space page tables
+[  +0.005174] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[  +0.009134] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[  +0.000057] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[  +0.000008] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[  +0.046926] wmi_bus wmi_bus-PNP0C14:00: WQ data block query control method not found
+[  +0.000002] wmi_bus wmi_bus-PNP0C14:00: WQ data block query control method not found
+[  +0.000001] wmi_bus wmi_bus-PNP0C14:00: WQ data block query control method not found
+[  +0.000001] wmi_bus wmi_bus-PNP0C14:00: WQ data block query control method not found
+[  +0.014474] hidraw: raw HID events driver (C) Jiri Kosina
+[  +0.003796] ahci 0000:00:17.0: version 3.0
+[  +0.001178] r8169 Gigabit Ethernet driver 2.3LK-NAPI loaded
+[  +0.000007] r8169 0000:02:00.0: can't disable ASPM; OS doesn't have ASPM control
+[  +0.005988] usb 1-3: new low-speed USB device number 3 using xhci_hcd
+[  +0.003150] ahci 0000:00:17.0: AHCI 0001.0301 32 slots 2 ports 6 Gbps 0x3 impl SATA mode
+[  +0.000003] ahci 0000:00:17.0: flags: 64bit ncq pm led clo only pio slum part deso sadm sds apst 
+[  +0.001246] r8169 0000:02:00.0 eth0: RTL8168g/8111g at 0x        (ptrval), 8c:16:45:0a:ce:0e, XID 10900800 IRQ 127
+[  +0.000003] r8169 0000:02:00.0 eth0: jumbo features [frames: 9200 bytes, tx checksumming: ko]
+[  +0.015871] scsi host0: ahci
+[  +0.003720] ACPI Warning: \_SB.PCI0.GFX0._DSM: Argument #4 type mismatch - Found [Buffer], ACPI requires [Package] (20170831/nsarguments-100)
+[  +0.000061] ACPI Warning: \_SB.PCI0.RP01.PXSX._DSM: Argument #4 type mismatch - Found [Buffer], ACPI requires [Package] (20170831/nsarguments-100)
+[  +0.000347] pci 0000:01:00.0: optimus capabilities: enabled, status dynamic power, hda bios codec supported
+[  +0.000002] VGA switcheroo: detected Optimus DSM method \_SB_.PCI0.RP01.PXSX handle
+[  +0.000001] nouveau: detected PR support, will not use DSM
+[  +0.000022] nouveau 0000:01:00.0: enabling device (0006 -> 0007)
+[  +0.000179] checking generic (a0000000 7f0000) vs hw (80000000 10000000)
+[  +0.000001] checking generic (a0000000 7f0000) vs hw (90000000 2000000)
+[  +0.000065] nouveau 0000:01:00.0: NVIDIA GM108 (1180f0a2)
+[  +0.007115] scsi host1: ahci
+[  +0.000058] ata1: SATA max UDMA/133 abar m2048@0x9432d000 port 0x9432d100 irq 126
+[  +0.000002] ata2: SATA max UDMA/133 abar m2048@0x9432d000 port 0x9432d180 irq 126
+[  +0.003606] [drm] Memory usable by graphics device = 4096M
+[  +0.000003] checking generic (a0000000 7f0000) vs hw (a0000000 10000000)
+[  +0.000000] fb: switching to inteldrmfb from EFI VGA
+[  +0.000022] Console: switching to colour dummy device 80x25
+[  +0.000070] [drm] Replacing VGA console driver
+[  +0.001612] r8169 0000:02:00.0 enp2s0: renamed from eth0
+[  +0.006284] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[  +0.000001] [drm] Driver supports precise vblank timestamp query.
+[  +0.002947] i915 0000:00:02.0: vgaarb: changed VGA decodes: olddecodes=io+mem,decodes=io+mem:owns=io+mem
+[  +0.000446] [drm] Finished loading DMC firmware i915/kbl_dmc_ver1_01.bin (v1.1)
+[  +0.001220] nouveau 0000:01:00.0: bios: version 82.08.6d.00.8b
+[  +0.105071] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000002] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000001] usb 1-3: Product: RXThreshold
+[  +0.000001] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000239] nouveau 0000:01:00.0: fb: 2048 MiB GDDR5
+[  +0.000028] nouveau 0000:01:00.0: bus: MMIO read of 00000000 FAULT at 612004 [ IBUS ]
+[  +0.008851] nouveau 0000:01:00.0: bus: MMIO read of 00000000 FAULT at 10ac08 [ IBUS ]
+[  +0.117180] usb 1-7: new full-speed USB device number 4 using xhci_hcd
+[  +0.067685] ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+[  +0.000054] ata2: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+[  +0.002635] ata2.00: ATAPI: HL-DT-ST DVDRAM GUE0N, T.02, max UDMA/33
+[  +0.002106] ata2.00: configured for UDMA/33
+[  +0.031559] clocksource: Switched to clocksource tsc
+[  +0.052894] usb 1-7: New USB device found, idVendor=0cf3, idProduct=e500
+[  +0.000002] usb 1-7: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[  +0.033465] ata1.00: ATA-10: ST1000LM035-1RK172, LCM2, max UDMA/100
+[  +0.000001] ata1.00: 1953525168 sectors, multi 16: LBA48 NCQ (depth 31/32), AA
+[  +0.049410] ata1.00: configured for UDMA/100
+[  +0.000153] scsi 0:0:0:0: Direct-Access     ATA      ST1000LM035-1RK1 LCM2 PQ: 0 ANSI: 5
+[  +0.000190] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[  +0.000018] sd 0:0:0:0: [sda] 1953525168 512-byte logical blocks: (1.00 TB/932 GiB)
+[  +0.000002] sd 0:0:0:0: [sda] 4096-byte physical blocks
+[  +0.000008] sd 0:0:0:0: [sda] Write Protect is off
+[  +0.000002] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[  +0.000012] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[  +0.001736] scsi 1:0:0:0: CD-ROM            HL-DT-ST DVDRAM GUE0N     T.02 PQ: 0 ANSI: 5
+[  +0.042005] usb 1-8: new high-speed USB device number 5 using xhci_hcd
+[  +0.030753]  sda: sda1 sda2 sda3 sda4 sda5 sda6 sda7 sda8 sda9 sda10
+[  +0.000676] sd 0:0:0:0: [sda] Attached SCSI disk
+[  +0.056068] sr 1:0:0:0: [sr0] scsi3-mmc drive: 24x/24x writer dvd-ram cd/rw xa/form2 cdda tray
+[  +0.000001] cdrom: Uniform CD-ROM driver Revision: 3.20
+[  +0.000090] sr 1:0:0:0: Attached scsi CD-ROM sr0
+[  +0.000052] sr 1:0:0:0: Attached scsi generic sg1 type 5
+[  +0.085682] usb 1-8: New USB device found, idVendor=04f2, idProduct=b5d8
+[  +0.000002] usb 1-8: New USB device strings: Mfr=3, Product=1, SerialNumber=2
+[  +0.000001] usb 1-8: Product: EasyCamera
+[  +0.000001] usb 1-8: Manufacturer: Chicony Electronics Co.,Ltd.
+[  +0.000001] usb 1-8: SerialNumber: 0001
+[  +0.005442] usbcore: registered new interface driver usbhid
+[  +0.000001] usbhid: USB HID core driver
+[  +0.001228] input: YSPRINGTECH USB OPTICAL MOUSE as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.0/0003:10C4:8105.0001/input/input3
+[  +0.000078] hid-generic 0003:10C4:8105.0001: input,hidraw0: USB HID v1.11 Mouse [YSPRINGTECH USB OPTICAL MOUSE] on usb-0000:00:14.0-1/input0
+[  +0.361161] random: fast init done
+[  +0.051206] [drm] RC6 on
+[  +0.285873] vga_switcheroo: enabled
+[  +0.000135] [TTM] Zone  kernel: Available graphics memory: 3972976 kiB
+[  +0.000001] [TTM] Zone   dma32: Available graphics memory: 2097152 kiB
+[  +0.000000] [TTM] Initializing pool allocator
+[  +0.000003] [TTM] Initializing DMA pool allocator
+[  +0.000011] nouveau 0000:01:00.0: DRM: VRAM: 2048 MiB
+[  +0.000001] nouveau 0000:01:00.0: DRM: GART: 1048576 MiB
+[  +0.000003] nouveau 0000:01:00.0: DRM: Pointer to TMDS table invalid
+[  +0.000001] nouveau 0000:01:00.0: DRM: DCB version 4.0
+[  +0.000757] nouveau 0000:01:00.0: DRM: MM: using COPY for buffer copies
+[  +0.000007] [drm] Initialized nouveau 1.3.1 20120801 for 0000:01:00.0 on minor 1
+[  +0.000841] [drm] Initialized i915 1.6.0 20171023 for 0000:00:02.0 on minor 0
+[  +0.001478] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[  +0.000358] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/input/input4
+[  +0.000133] [Firmware Bug]: ACPI(PXSX) defines _DOD but not _DOS
+[  +0.000016] ACPI: Video Device [PXSX] (multi-head: yes  rom: yes  post: no)
+[  +0.000042] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:32/LNXVIDEO:01/input/input5
+[  +0.012878] fbcon: inteldrmfb (fb0) is primary device
+[  +0.000039] Console: switching to colour frame buffer device 240x67
+[  +0.000021] i915 0000:00:02.0: fb0: inteldrmfb frame buffer device
+[  +2.328937] random: crng init done
+[  +0.000002] random: 7 urandom warning(s) missed due to ratelimiting
+[  +0.928345] EXT4-fs (sda8): mounted filesystem with ordered data mode. Opts: (null)
+[  +1.850639] systemd[1]: systemd 229 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ -LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN)
+[  +0.017123] systemd[1]: Detected architecture x86-64.
+[  +0.008559] systemd[1]: Set hostname to <LIKHITH>.
+[  +1.120233] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[  +0.000058] systemd[1]: Listening on Syslog Socket.
+[  +0.000082] systemd[1]: Created slice System Slice.
+[  +0.000024] systemd[1]: Listening on fsck to fsckd communication Socket.
+[  +0.000056] systemd[1]: Listening on Journal Audit Socket.
+[  +0.000010] systemd[1]: Reached target User and Group Name Lookups.
+[  +0.000020] systemd[1]: Listening on Journal Socket (/dev/log).
+[  +0.584016] lp: driver loaded but no devices found
+[  +0.188169] ppdev: user-space parallel port driver
+[  +1.200618] usb 1-3: USB disconnect, device number 3
+[  +9.675572] EXT4-fs (sda8): re-mounted. Opts: errors=remount-ro
+[  +0.087012] systemd-journald[265]: Received request to flush runtime journal from PID 1
+[  +0.154385] input: Ideapad extra buttons as /devices/pci0000:00/0000:00:1f.0/PNP0C09:00/VPC2004:00/input/input6
+[  +0.025681] (NULL device *): hwmon_device_register() is deprecated. Please convert the driver to use hwmon_device_register_with_info().
+[  +0.002376] mei_me 0000:00:16.0: enabling device (0000 -> 0002)
+[  +0.006105] Bluetooth: Core ver 2.22
+[  +0.000015] NET: Registered protocol family 31
+[  +0.000000] Bluetooth: HCI device and connection manager initialized
+[  +0.000003] Bluetooth: HCI socket layer initialized
+[  +0.000002] Bluetooth: L2CAP socket layer initialized
+[  +0.000004] Bluetooth: SCO socket layer initialized
+[  +0.007091] usbcore: registered new interface driver btusb
+[  +0.011724] intel-lpss 0000:00:15.0: enabling device (0000 -> 0002)
+[  +0.005030] idma64 idma64.0: Found Intel integrated DMA 64-bit
+[  +0.009840] i2c_hid i2c-ELAN0608:00: i2c-ELAN0608:00 supply vdd not found, using dummy regulator
+[  +0.002643] elan_i2c i2c-ELAN0608:00: i2c-ELAN0608:00 supply vcc not found, using dummy regulator
+[  +0.002692] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[  +0.014257] snd_hda_intel 0000:00:1f.3: bound 0000:00:02.0 (ops i915_audio_component_bind_ops [i915])
+[  +0.006878] media: Linux media interface: v0.10
+[  +0.006445] RAPL PMU: API unit is 2^-32 Joules, 5 fixed counters, 655360 ms ovfl timer
+[  +0.000001] RAPL PMU: hw unit of domain pp0-core 2^-14 Joules
+[  +0.000001] RAPL PMU: hw unit of domain package 2^-14 Joules
+[  +0.000001] RAPL PMU: hw unit of domain dram 2^-14 Joules
+[  +0.000000] RAPL PMU: hw unit of domain pp1-gpu 2^-14 Joules
+[  +0.000001] RAPL PMU: hw unit of domain psys 2^-14 Joules
+[  +0.008337] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[  +0.000266] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[  +0.001999] Linux video capture interface: v2.00
+[  +0.008984] uvcvideo: Found UVC 1.00 device EasyCamera (04f2:b5d8)
+[  +0.000985] AVX2 version of gcm_enc/dec engaged.
+[  +0.000000] AES CTR mode by8 optimization enabled
+[  +0.000408] uvcvideo 1-8:1.0: Entity type for entity Extension 4 was not initialized!
+[  +0.000002] uvcvideo 1-8:1.0: Entity type for entity Processing 2 was not initialized!
+[  +0.000002] uvcvideo 1-8:1.0: Entity type for entity Camera 1 was not initialized!
+[  +0.000064] input: EasyCamera: EasyCamera as /devices/pci0000:00/0000:00:14.0/usb1/1-8/1-8:1.0/input/input7
+[  +0.000057] usbcore: registered new interface driver uvcvideo
+[  +0.000001] USB Video Class driver (1.1.1)
+[  +0.027834] ath10k_pci 0000:03:00.0: pci irq msi oper_irq_mode 2 irq_mode 0 reset_mode 0
+[  +0.020781] intel_rapl: Found RAPL domain package
+[  +0.000002] intel_rapl: Found RAPL domain core
+[  +0.000001] intel_rapl: Found RAPL domain uncore
+[  +0.000001] intel_rapl: Found RAPL domain dram
+[  +0.003433] snd_hda_codec_generic hdaudioC0D0: autoconfig for Generic: line_outs=1 (0x14/0x0/0x0/0x0/0x0) type:speaker
+[  +0.000002] snd_hda_codec_generic hdaudioC0D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+[  +0.000001] snd_hda_codec_generic hdaudioC0D0:    hp_outs=1 (0x21/0x0/0x0/0x0/0x0)
+[  +0.000002] snd_hda_codec_generic hdaudioC0D0:    mono: mono_out=0x0
+[  +0.000001] snd_hda_codec_generic hdaudioC0D0:    inputs:
+[  +0.000001] snd_hda_codec_generic hdaudioC0D0:      Mic=0x19
+[  +0.000002] snd_hda_codec_generic hdaudioC0D0:      Internal Mic=0x12
+[  +0.013682] elan_i2c i2c-ELAN0608:00: Elan Touchpad: Module ID: 0x005b, Firmware: 0x0001, Sample: 0x0002, IAP: 0x000d
+[  +0.000262] input: Elan Touchpad as /devices/pci0000:00/0000:00:15.0/i2c_designware.0/i2c-7/i2c-ELAN0608:00/input/input15
+[  +0.000996] input: HDA Intel PCH Mic as /devices/pci0000:00/0000:00:1f.3/sound/card0/input8
+[  +0.000054] input: HDA Intel PCH Headphone as /devices/pci0000:00/0000:00:1f.3/sound/card0/input9
+[  +0.000038] input: HDA Intel PCH HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:1f.3/sound/card0/input10
+[  +0.000034] input: HDA Intel PCH HDMI/DP,pcm=7 as /devices/pci0000:00/0000:00:1f.3/sound/card0/input11
+[  +0.000115] input: HDA Intel PCH HDMI/DP,pcm=8 as /devices/pci0000:00/0000:00:1f.3/sound/card0/input12
+[  +0.000103] input: HDA Intel PCH HDMI/DP,pcm=9 as /devices/pci0000:00/0000:00:1f.3/sound/card0/input13
+[  +0.000057] input: HDA Intel PCH HDMI/DP,pcm=10 as /devices/pci0000:00/0000:00:1f.3/sound/card0/input14
+[  +0.275240] ath10k_pci 0000:03:00.0: Direct firmware load for ath10k/pre-cal-pci-0000:03:00.0.bin failed with error -2
+[  +0.000062] ath10k_pci 0000:03:00.0: Direct firmware load for ath10k/cal-pci-0000:03:00.0.bin failed with error -2
+[  +0.002920] ath10k_pci 0000:03:00.0: Direct firmware load for ath10k/QCA9377/hw1.0/firmware-6.bin failed with error -2
+[  +0.021790] ath10k_pci 0000:03:00.0: qca9377 hw1.1 target 0x05020001 chip_id 0x003821ff sub 17aa:0901
+[  +0.000002] ath10k_pci 0000:03:00.0: kconfig debug 0 debugfs 1 tracing 1 dfs 0 testmode 0
+[  +0.000350] ath10k_pci 0000:03:00.0: firmware ver WLAN.TF.1.0-00267-1 api 5 features ignore-otp crc32 79cea2c7
+[  +0.387715] ath10k_pci 0000:03:00.0: board_file api 2 bmi_id N/A crc32 93da0176
+[  +0.489044] ath10k_pci 0000:03:00.0: htt-ver 3.1 wmi-op 4 htt-op 3 cal otp max-sta 32 raw 0 hwcrypto 1
+[  +0.092046] ath: EEPROM regdomain: 0x6c
+[  +0.000001] ath: EEPROM indicates we should expect a direct regpair map
+[  +0.000001] ath: Country alpha2 being used: 00
+[  +0.000001] ath: Regpair used: 0x6c
+[  +0.004134] ath10k_pci 0000:03:00.0 wlp3s0: renamed from wlan0
+[  +0.594725] Adding 10741756k swap on /dev/sda9.  Priority:-2 extents:1 across:10741756k FS
+[  +2.422584] audit: type=1400 audit(1556382460.050:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/sbin/dhclient" pid=881 comm="apparmor_parser"
+[  +0.000003] audit: type=1400 audit(1556382460.050:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=881 comm="apparmor_parser"
+[  +0.000002] audit: type=1400 audit(1556382460.050:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-helper" pid=881 comm="apparmor_parser"
+[  +0.000002] audit: type=1400 audit(1556382460.050:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=881 comm="apparmor_parser"
+[  +0.000920] audit: type=1400 audit(1556382460.050:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/lightdm/lightdm-guest-session" pid=880 comm="apparmor_parser"
+[  +0.000002] audit: type=1400 audit(1556382460.050:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/lightdm/lightdm-guest-session//chromium" pid=880 comm="apparmor_parser"
+[  +0.001314] audit: type=1400 audit(1556382460.050:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/cups-browsed" pid=886 comm="apparmor_parser"
+[  +0.002775] audit: type=1400 audit(1556382460.050:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/cups/backend/cups-pdf" pid=887 comm="apparmor_parser"
+[  +0.000003] audit: type=1400 audit(1556382460.050:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/cupsd" pid=887 comm="apparmor_parser"
+[  +0.000002] audit: type=1400 audit(1556382460.050:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/cupsd//third_party" pid=887 comm="apparmor_parser"
+[  +0.258387] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[  +0.000001] Bluetooth: BNEP filters: protocol multicast
+[  +0.000004] Bluetooth: BNEP socket layer initialized
+[  +2.134626] IPv6: ADDRCONF(NETDEV_UP): wlp3s0: link is not ready
+[  +0.669727] IPv6: ADDRCONF(NETDEV_UP): wlp3s0: link is not ready
+[  +0.002990] IPv6: ADDRCONF(NETDEV_UP): enp2s0: link is not ready
+[  +0.064355] r8169 0000:02:00.0 enp2s0: link down
+[  +0.000001] r8169 0000:02:00.0 enp2s0: link down
+[  +0.000065] IPv6: ADDRCONF(NETDEV_UP): enp2s0: link is not ready
+[  +0.103699] IPv6: ADDRCONF(NETDEV_UP): wlp3s0: link is not ready
+[  +2.044272] r8169 0000:02:00.0 enp2s0: link up
+[  +0.000007] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
+[  +1.131942] Bluetooth: RFCOMM TTY layer initialized
+[  +0.000006] Bluetooth: RFCOMM socket layer initialized
+[  +0.000004] Bluetooth: RFCOMM ver 1.11
+[  +6.446306] wlp3s0: authenticate with 40:01:7a:01:bc:c0
+[  +0.036273] wlp3s0: send auth to 40:01:7a:01:bc:c0 (try 1/3)
+[  +0.103507] wlp3s0: send auth to 40:01:7a:01:bc:c0 (try 2/3)
+[  +0.001323] wlp3s0: authenticated
+[  +0.002824] wlp3s0: associate with 40:01:7a:01:bc:c0 (try 1/3)
+[  +0.004721] wlp3s0: RX AssocResp from 40:01:7a:01:bc:c0 (capab=0x421 status=0 aid=7)
+[  +0.002198] wlp3s0: associated
+[  +0.000107] ath: EEPROM regdomain: 0x8164
+[  +0.000001] ath: EEPROM indicates we should expect a country code
+[  +0.000000] ath: doing EEPROM country->regdmn map search
+[  +0.000001] ath: country maps to regdmn code: 0x5b
+[  +0.000001] ath: Country alpha2 being used: IN
+[  +0.000001] ath: Regpair used: 0x5b
+[  +0.000000] ath: regdomain 0x8164 dynamically updated by country IE
+[  +0.000082] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[  +0.044286] wlp3s0: Limiting TX power to 23 (23 - 0) dBm as advertised by 40:01:7a:01:bc:c0
+[Apr27 21:58] usb_driver: loading out-of-tree module taints kernel.
+[  +0.000032] usb_driver: module verification failed: signature and/or required key missing - tainting kernel
+[  +0.001140] usbcore: registered new interface driver MyUSBDriver
+[Apr27 21:59] usb 1-3: new low-speed USB device number 6 using xhci_hcd
+[  +0.155524] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000007] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000006] usb 1-3: Product: RXThreshold
+[  +0.000004] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000984] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000200] USB ADC Sensor Driver ON, Minor = 0
+[Apr27 22:00] ADC file Opened
+[  +0.000008] Inside IOCTL
+[  +0.000004] cmd = 1074287617 arg = 500
+[  +0.844093] usb 1-3: USB disconnect, device number 6
+[  +0.012508] USB ADC Removed
+[  +0.512024] usb 1-3: new low-speed USB device number 7 using xhci_hcd
+[  +0.153445] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000003] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000001] usb 1-3: Product: RXThreshold
+[  +0.000001] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000387] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000043] USB ADC Sensor Driver ON, Minor = 0
+[  +0.843471] usb 1-3: USB disconnect, device number 7
+[  +0.000329] USB ADC Removed
+[  +0.526372] usb 1-3: new low-speed USB device number 8 using xhci_hcd
+[  +0.153404] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000002] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000001] usb 1-3: Product: RXThreshold
+[  +0.000001] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000351] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000043] USB ADC Sensor Driver ON, Minor = 0
+[  +0.843725] usb 1-3: USB disconnect, device number 8
+[  +0.000267] USB ADC Removed
+[  +0.317706] BUG: unable to handle kernel NULL pointer dereference at 0000000000000154
+[  +0.000010] IP: usb_submit_urb.part.8+0x70/0x560
+[  +0.000001] PGD 8000000249859067 P4D 8000000249859067 PUD 270a08067 PMD 0 
+[  +0.000003] Oops: 0000 [#1] SMP PTI
+[  +0.000002] Modules linked in: usb_driver(OE) rfcomm bnep nls_iso8859_1 arc4 joydev snd_hda_codec_hdmi snd_hda_codec_generic intel_rapl x86_pkg_temp_thermal intel_powerclamp coretemp kvm_intel kvm ath10k_pci ath10k_core irqbypass crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc ath mac80211 uvcvideo videobuf2_vmalloc aesni_intel videobuf2_memops videobuf2_v4l2 snd_soc_skl videobuf2_core snd_soc_skl_ipc aes_x86_64 snd_hda_ext_core crypto_simd glue_helper snd_soc_sst_dsp cryptd snd_soc_sst_ipc intel_cstate snd_soc_acpi intel_rapl_perf videodev snd_soc_core cfg80211 media snd_compress ac97_bus snd_pcm_dmaengine snd_hda_intel snd_hda_codec snd_hda_core snd_hwdep snd_pcm input_leds snd_seq_midi snd_seq_midi_event serio_raw intel_wmi_thunderbolt snd_rawmidi wmi_bmof idma64 snd_seq virt_dma snd_seq_device
+[  +0.000034]  snd_timer snd soundcore btusb btrtl btbcm shpchp btintel bluetooth intel_lpss_pci mei_me mei intel_lpss intel_pch_thermal ecdh_generic elan_i2c ideapad_laptop sparse_keymap mac_hid acpi_pad parport_pc ppdev lp parport autofs4 hid_generic usbhid nouveau i915 mxm_wmi ttm i2c_algo_bit drm_kms_helper syscopyarea sysfillrect r8169 sysimgblt ahci fb_sys_fops mii libahci i2c_hid drm hid wmi pinctrl_sunrisepoint video
+[  +0.000024] CPU: 1 PID: 2648 Comm: userapp Tainted: G           OE    4.15.0-47-generic #50~16.04.1-Ubuntu
+[  +0.000001] Hardware name: LENOVO 80XL/LNVNB161216, BIOS 4WCN37WW 12/04/2017
+[  +0.000004] RIP: 0010:usb_submit_urb.part.8+0x70/0x560
+[  +0.000001] RSP: 0018:ffffbd9742597d08 EFLAGS: 00010202
+[  +0.000002] RAX: 0000000000000151 RBX: ffff953049dac900 RCX: ffff9530708e8ba0
+[  +0.000001] RDX: ffff9530708e8c20 RSI: 0000000001400000 RDI: ffff953049dac900
+[  +0.000001] RBP: ffffbd9742597d48 R08: ffff953083ca7100 R09: ffff95307b403380
+[  +0.000001] R10: ffff953049dac900 R11: 00000000000002cc R12: ffff9530708e8800
+[  +0.000001] R13: ffff9530708e8800 R14: ffffbd9742597df4 R15: 0000000000000000
+[  +0.000002] FS:  00007fe033e6e700(0000) GS:ffff953083c80000(0000) knlGS:0000000000000000
+[  +0.000001] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  +0.000002] CR2: 0000000000000154 CR3: 0000000249928002 CR4: 00000000003606e0
+[  +0.000001] Call Trace:
+[  +0.000006]  usb_submit_urb+0x58/0x70
+[  +0.000005]  ? _cond_resched+0x1a/0x50
+[  +0.000002]  usb_start_wait_urb+0x6e/0x170
+[  +0.000001]  usb_control_msg+0xdc/0x140
+[  +0.000006]  adc_ioctl+0x69/0x8a [usb_driver]
+[  +0.000005]  do_vfs_ioctl+0xa4/0x600
+[  +0.000002]  ? putname+0x54/0x60
+[  +0.000004]  ? do_sys_open+0x1b4/0x290
+[  +0.000002]  SyS_ioctl+0x79/0x90
+[  +0.000009]  do_syscall_64+0x73/0x130
+[  +0.000004]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[  +0.000004] RIP: 0033:0x7fe033997f47
+[  +0.000001] RSP: 002b:00007ffd8fbb05c8 EFLAGS: 00000202 ORIG_RAX: 0000000000000010
+[  +0.000001] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 00007fe033997f47
+[  +0.000001] RDX: 00000000000001f4 RSI: 0000000040085401 RDI: 0000000000000003
+[  +0.000002] RBP: 00007ffd8fbb05f0 R08: 0000000000000000 R09: 0000000000000008
+[  +0.000001] R10: 000000000000053f R11: 0000000000000202 R12: 0000000000400590
+[  +0.000001] R13: 00007ffd8fbb06d0 R14: 0000000000000000 R15: 0000000000000000
+[  +0.000001] Code: c1 e8 0f 83 e0 0f 48 8b 04 c2 48 85 c0 0f 84 e9 04 00 00 48 89 47 50 c7 47 60 8d ff ff ff 48 89 fb c7 87 8c 00 00 00 00 00 00 00 <44> 0f b6 60 03 89 75 d4 41 83 e4 03 0f 85 a0 01 00 00 48 8b 97 
+[  +0.000025] RIP: usb_submit_urb.part.8+0x70/0x560 RSP: ffffbd9742597d08
+[  +0.000001] CR2: 0000000000000154
+[  +0.000002] ---[ end trace 23ad831b038570b6 ]---
+[  +0.000078] ADC file Closed
+[  +0.208776] usb 1-3: new low-speed USB device number 9 using xhci_hcd
+[  +0.155164] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000015] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000008] usb 1-3: Product: RXThreshold
+[  +0.000008] usb 1-3: Manufacturer: www.obdev.at
+[  +0.001421] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000254] USB ADC Sensor Driver ON, Minor = 0
+[Apr27 22:03] ADC file Opened
+[  +0.000019] Inside IOCTL
+[  +0.000007] cmd = 1 arg = 800
+[  +0.000005] Invalid Command
+[  +0.000026] ADC file Closed
+[Apr27 22:05] usbcore: deregistering interface driver MyUSBDriver
+[  +0.000276] USB ADC Removed
+[ +11.834146] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000237] USB ADC Sensor Driver ON, Minor = 0
+[  +0.000028] usbcore: registered new interface driver MyUSBDriver
+[  +8.356101] usb 1-3: USB disconnect, device number 9
+[  +0.000403] USB ADC Removed
+[  +2.955453] usb 1-3: new low-speed USB device number 10 using xhci_hcd
+[  +0.155201] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000016] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000009] usb 1-3: Product: RXThreshold
+[  +0.000008] usb 1-3: Manufacturer: www.obdev.at
+[  +0.002354] USB ADC with VID=16C0 PID=05DC Found
+[  +0.001383] USB ADC Sensor Driver ON, Minor = 0
+[Apr27 22:06] ADC file Opened
+[  +0.000015] Inside IOCTL
+[  +0.000005] cmd = 1 arg = 100
+[  +0.847589] usb 1-3: USB disconnect, device number 10
+[  +0.009976] USB ADC Removed
+[  +0.515975] usb 1-3: new low-speed USB device number 11 using xhci_hcd
+[  +0.153363] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000004] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000003] usb 1-3: Product: RXThreshold
+[  +0.000002] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000488] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000043] USB ADC Sensor Driver ON, Minor = 0
+[  +0.847606] usb 1-3: USB disconnect, device number 11
+[  +0.000308] USB ADC Removed
+[  +0.526238] usb 1-3: new low-speed USB device number 12 using xhci_hcd
+[  +0.153356] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000004] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000001] usb 1-3: Product: RXThreshold
+[  +0.000002] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000448] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000047] USB ADC Sensor Driver ON, Minor = 0
+[  +0.848563] usb 1-3: USB disconnect, device number 12
+[  +0.000274] USB ADC Removed
+[  +0.525269] usb 1-3: new low-speed USB device number 13 using xhci_hcd
+[  +0.153345] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000004] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000003] usb 1-3: Product: RXThreshold
+[  +0.000002] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000488] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000651] USB ADC Sensor Driver ON, Minor = 0
+[  +0.848440] usb 1-3: USB disconnect, device number 13
+[  +0.000272] USB ADC Removed
+[  +0.524847] usb 1-3: new low-speed USB device number 14 using xhci_hcd
+[  +0.153624] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000003] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000002] usb 1-3: Product: RXThreshold
+[  +0.000001] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000397] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000045] USB ADC Sensor Driver ON, Minor = 0
+[  +0.849290] usb 1-3: USB disconnect, device number 14
+[  +0.000211] USB ADC Removed
+[  +0.524439] usb 1-3: new low-speed USB device number 15 using xhci_hcd
+[  +0.153609] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000003] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000002] usb 1-3: Product: RXThreshold
+[  +0.000001] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000336] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000286] USB ADC Sensor Driver ON, Minor = 0
+[  +0.849111] usb 1-3: USB disconnect, device number 15
+[  +0.000219] USB ADC Removed
+[  +0.524435] usb 1-3: new low-speed USB device number 16 using xhci_hcd
+[  +0.153609] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000003] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000002] usb 1-3: Product: RXThreshold
+[  +0.000002] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000379] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000046] USB ADC Sensor Driver ON, Minor = 0
+[  +0.849568] usb 1-3: USB disconnect, device number 16
+[  +0.000237] USB ADC Removed
+[  +0.201948] BUG: unable to handle kernel NULL pointer dereference at 00000000000002c8
+[  +0.000010] IP: usb_submit_urb.part.8+0x70/0x560
+[  +0.000001] PGD 8000000270316067 P4D 8000000270316067 PUD 27768c067 PMD 0 
+[  +0.000005] Oops: 0000 [#2] SMP PTI
+[  +0.000002] Modules linked in: usb_driver(OE) rfcomm bnep nls_iso8859_1 arc4 joydev snd_hda_codec_hdmi snd_hda_codec_generic intel_rapl x86_pkg_temp_thermal intel_powerclamp coretemp kvm_intel kvm ath10k_pci ath10k_core irqbypass crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc ath mac80211 uvcvideo videobuf2_vmalloc aesni_intel videobuf2_memops videobuf2_v4l2 snd_soc_skl videobuf2_core snd_soc_skl_ipc aes_x86_64 snd_hda_ext_core crypto_simd glue_helper snd_soc_sst_dsp cryptd snd_soc_sst_ipc intel_cstate snd_soc_acpi intel_rapl_perf videodev snd_soc_core cfg80211 media snd_compress ac97_bus snd_pcm_dmaengine snd_hda_intel snd_hda_codec snd_hda_core snd_hwdep snd_pcm input_leds snd_seq_midi snd_seq_midi_event serio_raw intel_wmi_thunderbolt snd_rawmidi wmi_bmof idma64 snd_seq virt_dma snd_seq_device
+[  +0.000035]  snd_timer snd soundcore btusb btrtl btbcm shpchp btintel bluetooth intel_lpss_pci mei_me mei intel_lpss intel_pch_thermal ecdh_generic elan_i2c ideapad_laptop sparse_keymap mac_hid acpi_pad parport_pc ppdev lp parport autofs4 hid_generic usbhid nouveau i915 mxm_wmi ttm i2c_algo_bit drm_kms_helper syscopyarea sysfillrect r8169 sysimgblt ahci fb_sys_fops mii libahci i2c_hid drm hid wmi pinctrl_sunrisepoint video [last unloaded: usb_driver]
+[  +0.000025] CPU: 0 PID: 3153 Comm: userapp Tainted: G      D    OE    4.15.0-47-generic #50~16.04.1-Ubuntu
+[  +0.000001] Hardware name: LENOVO 80XL/LNVNB161216, BIOS 4WCN37WW 12/04/2017
+[  +0.000004] RIP: 0010:usb_submit_urb.part.8+0x70/0x560
+[  +0.000001] RSP: 0018:ffffbd9742293d08 EFLAGS: 00010206
+[  +0.000001] RAX: 00000000000002c5 RBX: ffff953077922240 RCX: ffff95304d3caba0
+[  +0.000002] RDX: ffff95304d3cac20 RSI: 0000000001400000 RDI: ffff953077922240
+[  +0.000001] RBP: ffffbd9742293d48 R08: ffff953083c27100 R09: ffff95307b403380
+[  +0.000001] R10: ffff953077922240 R11: 0000000000000252 R12: ffff95304d3ca800
+[  +0.000001] R13: ffff95304d3ca800 R14: ffffbd9742293df4 R15: 0000000000000000
+[  +0.000001] FS:  00007fc1e897a700(0000) GS:ffff953083c00000(0000) knlGS:0000000000000000
+[  +0.000002] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  +0.000001] CR2: 00000000000002c8 CR3: 0000000249fa8006 CR4: 00000000003606f0
+[  +0.000001] Call Trace:
+[  +0.000005]  ? usb_control_msg+0xf6/0x140
+[  +0.000002]  usb_submit_urb+0x58/0x70
+[  +0.000004]  ? _cond_resched+0x1a/0x50
+[  +0.000002]  usb_start_wait_urb+0x6e/0x170
+[  +0.000002]  usb_control_msg+0xdc/0x140
+[  +0.000006]  adc_ioctl+0x66/0x87 [usb_driver]
+[  +0.000008]  do_vfs_ioctl+0xa4/0x600
+[  +0.000003]  ? putname+0x54/0x60
+[  +0.000011]  ? do_sys_open+0x1b4/0x290
+[  +0.000002]  SyS_ioctl+0x79/0x90
+[  +0.000009]  do_syscall_64+0x73/0x130
+[  +0.000005]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[  +0.000003] RIP: 0033:0x7fc1e84a3f47
+[  +0.000001] RSP: 002b:00007ffda1b71328 EFLAGS: 00000206 ORIG_RAX: 0000000000000010
+[  +0.000002] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 00007fc1e84a3f47
+[  +0.000001] RDX: 0000000000000064 RSI: 0000000000000001 RDI: 0000000000000003
+[  +0.000001] RBP: 00007ffda1b71350 R08: 0000000000000000 R09: 0000000000000008
+[  +0.000001] R10: 000000000000053f R11: 0000000000000206 R12: 0000000000400590
+[  +0.000001] R13: 00007ffda1b71430 R14: 0000000000000000 R15: 0000000000000000
+[  +0.000001] Code: c1 e8 0f 83 e0 0f 48 8b 04 c2 48 85 c0 0f 84 e9 04 00 00 48 89 47 50 c7 47 60 8d ff ff ff 48 89 fb c7 87 8c 00 00 00 00 00 00 00 <44> 0f b6 60 03 89 75 d4 41 83 e4 03 0f 85 a0 01 00 00 48 8b 97 
+[  +0.000028] RIP: usb_submit_urb.part.8+0x70/0x560 RSP: ffffbd9742293d08
+[  +0.000001] CR2: 00000000000002c8
+[  +0.000003] ---[ end trace 23ad831b038570b7 ]---
+[  +0.000104] ADC file Closed
+[  +0.322396] usb 1-3: new low-speed USB device number 17 using xhci_hcd
+[  +0.154805] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000011] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000007] usb 1-3: Product: RXThreshold
+[  +0.000005] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000811] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000411] USB ADC Sensor Driver ON, Minor = 0
+[Apr27 22:08] ADC file Opened
+[  +0.000015] Inside IOCTL
+[  +0.000005] cmd = 1 arg = 500
+[  +0.852615] usb 1-3: USB disconnect, device number 17
+[  +0.000321] USB ADC Removed
+[  +0.524492] usb 1-3: new low-speed USB device number 18 using xhci_hcd
+[  +0.153748] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000003] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000002] usb 1-3: Product: RXThreshold
+[  +0.000002] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000440] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000095] USB ADC Sensor Driver ON, Minor = 0
+[  +0.852446] usb 1-3: USB disconnect, device number 18
+[  +0.009248] USB ADC Removed
+[  +0.516025] usb 1-3: new low-speed USB device number 19 using xhci_hcd
+[  +0.096606] BUG: unable to handle kernel NULL pointer dereference at 000000000000026a
+[  +0.000009] IP: usb_submit_urb.part.8+0x70/0x560
+[  +0.000001] PGD 8000000232583067 P4D 8000000232583067 PUD 24efdc067 PMD 0 
+[  +0.000004] Oops: 0000 [#3] SMP PTI
+[  +0.000002] Modules linked in: usb_driver(OE) rfcomm bnep nls_iso8859_1 arc4 joydev snd_hda_codec_hdmi snd_hda_codec_generic intel_rapl x86_pkg_temp_thermal intel_powerclamp coretemp kvm_intel kvm ath10k_pci ath10k_core irqbypass crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc ath mac80211 uvcvideo videobuf2_vmalloc aesni_intel videobuf2_memops videobuf2_v4l2 snd_soc_skl videobuf2_core snd_soc_skl_ipc aes_x86_64 snd_hda_ext_core crypto_simd glue_helper snd_soc_sst_dsp cryptd snd_soc_sst_ipc intel_cstate snd_soc_acpi intel_rapl_perf videodev snd_soc_core cfg80211 media snd_compress ac97_bus snd_pcm_dmaengine snd_hda_intel snd_hda_codec snd_hda_core snd_hwdep snd_pcm input_leds snd_seq_midi snd_seq_midi_event serio_raw intel_wmi_thunderbolt snd_rawmidi wmi_bmof idma64 snd_seq virt_dma snd_seq_device
+[  +0.000033]  snd_timer snd soundcore btusb btrtl btbcm shpchp btintel bluetooth intel_lpss_pci mei_me mei intel_lpss intel_pch_thermal ecdh_generic elan_i2c ideapad_laptop sparse_keymap mac_hid acpi_pad parport_pc ppdev lp parport autofs4 hid_generic usbhid nouveau i915 mxm_wmi ttm i2c_algo_bit drm_kms_helper syscopyarea sysfillrect r8169 sysimgblt ahci fb_sys_fops mii libahci i2c_hid drm hid wmi pinctrl_sunrisepoint video [last unloaded: usb_driver]
+[  +0.000026] CPU: 1 PID: 3254 Comm: userapp Tainted: G      D    OE    4.15.0-47-generic #50~16.04.1-Ubuntu
+[  +0.000002] Hardware name: LENOVO 80XL/LNVNB161216, BIOS 4WCN37WW 12/04/2017
+[  +0.000004] RIP: 0010:usb_submit_urb.part.8+0x70/0x560
+[  +0.000002] RSP: 0018:ffffbd9742337d08 EFLAGS: 00010202
+[  +0.000001] RAX: 0000000000000267 RBX: ffff953072bc96c0 RCX: ffff9530708ec3a0
+[  +0.000001] RDX: ffff9530708ec420 RSI: 0000000001400000 RDI: ffff953072bc96c0
+[  +0.000002] RBP: ffffbd9742337d48 R08: ffff953083ca7100 R09: ffff95307b403380
+[  +0.000001] R10: ffff953072bc96c0 R11: 0000000000000373 R12: ffff9530708ec000
+[  +0.000001] R13: ffff9530708ec000 R14: ffffbd9742337df4 R15: 0000000000000000
+[  +0.000001] FS:  00007fe272c9d700(0000) GS:ffff953083c80000(0000) knlGS:0000000000000000
+[  +0.000002] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  +0.000001] CR2: 000000000000026a CR3: 000000027768c002 CR4: 00000000003606e0
+[  +0.000002] Call Trace:
+[  +0.000006]  usb_submit_urb+0x58/0x70
+[  +0.000004]  ? _cond_resched+0x1a/0x50
+[  +0.000001]  usb_start_wait_urb+0x6e/0x170
+[  +0.000002]  usb_control_msg+0xdc/0x140
+[  +0.000005]  adc_ioctl+0x66/0x87 [usb_driver]
+[  +0.000005]  do_vfs_ioctl+0xa4/0x600
+[  +0.000002]  ? putname+0x54/0x60
+[  +0.000006]  ? do_sys_open+0x1b4/0x290
+[  +0.000003]  SyS_ioctl+0x79/0x90
+[  +0.000011]  do_syscall_64+0x73/0x130
+[  +0.000005]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[  +0.000004] RIP: 0033:0x7fe2727c6f47
+[  +0.000001] RSP: 002b:00007ffc54634e78 EFLAGS: 00000206 ORIG_RAX: 0000000000000010
+[  +0.000002] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 00007fe2727c6f47
+[  +0.000002] RDX: 00000000000001f4 RSI: 0000000000000001 RDI: 0000000000000003
+[  +0.000001] RBP: 00007ffc54634ea0 R08: 0000000000000000 R09: 0000000000000008
+[  +0.000001] R10: 000000000000053f R11: 0000000000000206 R12: 0000000000400590
+[  +0.000001] R13: 00007ffc54634f80 R14: 0000000000000000 R15: 0000000000000000
+[  +0.000002] Code: c1 e8 0f 83 e0 0f 48 8b 04 c2 48 85 c0 0f 84 e9 04 00 00 48 89 47 50 c7 47 60 8d ff ff ff 48 89 fb c7 87 8c 00 00 00 00 00 00 00 <44> 0f b6 60 03 89 75 d4 41 83 e4 03 0f 85 a0 01 00 00 48 8b 97 
+[  +0.000024] RIP: usb_submit_urb.part.8+0x70/0x560 RSP: ffffbd9742337d08
+[  +0.000001] CR2: 000000000000026a
+[  +0.000002] ---[ end trace 23ad831b038570b8 ]---
+[  +0.000093] ADC file Closed
+[  +0.057656] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000006] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000003] usb 1-3: Product: RXThreshold
+[  +0.000002] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000556] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000117] USB ADC Sensor Driver ON, Minor = 0
+[ +12.987755] ADC file Opened
+[  +0.000017] Inside IOCTL
+[  +0.000008] cmd = 1 arg = 1023
+[  +0.852856] usb 1-3: USB disconnect, device number 19
+[  +0.000321] USB ADC Removed
+[  +0.523898] usb 1-3: new low-speed USB device number 20 using xhci_hcd
+[  +0.153664] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000003] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000002] usb 1-3: Product: RXThreshold
+[  +0.000001] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000448] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000046] USB ADC Sensor Driver ON, Minor = 0
+[  +0.852540] usb 1-3: USB disconnect, device number 20
+[  +0.000254] USB ADC Removed
+[  +0.525057] usb 1-3: new low-speed USB device number 21 using xhci_hcd
+[  +0.153644] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000004] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000001] usb 1-3: Product: RXThreshold
+[  +0.000002] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000394] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000047] USB ADC Sensor Driver ON, Minor = 0
+[  +0.852468] usb 1-3: USB disconnect, device number 21
+[  +0.000260] USB ADC Removed
+[  +0.525137] usb 1-3: new low-speed USB device number 22 using xhci_hcd
+[  +0.153643] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000003] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000003] usb 1-3: Product: RXThreshold
+[  +0.000002] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000488] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000044] USB ADC Sensor Driver ON, Minor = 0
+[  +0.852553] usb 1-3: USB disconnect, device number 22
+[  +0.000302] USB ADC Removed
+[  +0.524971] usb 1-3: new low-speed USB device number 23 using xhci_hcd
+[  +0.153635] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000004] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000002] usb 1-3: Product: RXThreshold
+[  +0.000002] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000485] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000041] USB ADC Sensor Driver ON, Minor = 0
+[  +0.852621] usb 1-3: USB disconnect, device number 23
+[  +0.000333] USB ADC Removed
+[  +0.524885] usb 1-3: new low-speed USB device number 24 using xhci_hcd
+[  +0.153626] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000003] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000003] usb 1-3: Product: RXThreshold
+[  +0.000002] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000490] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000041] USB ADC Sensor Driver ON, Minor = 0
+[  +0.852573] usb 1-3: USB disconnect, device number 24
+[  +0.000301] USB ADC Removed
+[  +0.524975] usb 1-3: new low-speed USB device number 25 using xhci_hcd
+[  +0.153613] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000004] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000002] usb 1-3: Product: RXThreshold
+[  +0.000002] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000488] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000039] USB ADC Sensor Driver ON, Minor = 0
+[  +0.852774] usb 1-3: USB disconnect, device number 25
+[  +0.000216] USB ADC Removed
+[  +0.524910] usb 1-3: new low-speed USB device number 26 using xhci_hcd
+[  +0.153609] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000003] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000002] usb 1-3: Product: RXThreshold
+[  +0.000001] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000389] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000047] USB ADC Sensor Driver ON, Minor = 0
+[  +0.852948] usb 1-3: USB disconnect, device number 26
+[  +0.000221] USB ADC Removed
+[  +0.524787] usb 1-3: new low-speed USB device number 27 using xhci_hcd
+[  +0.000001] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000002] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000001] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000001] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000002] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000001] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000004] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000002] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000001] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +1.464043] usb 1-3: device descriptor read/64, error -71
+[  +1.252444] usb 1-3: device descriptor read/64, error -71
+[  +0.235527] usb 1-3: new low-speed USB device number 28 using xhci_hcd
+[  +0.000001] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000002] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000001] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000002] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000001] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000004] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000001] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000002] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.128003] usb 1-3: device descriptor read/64, error -71
+[  +0.235996] usb 1-3: device descriptor read/64, error -71
+[  +0.108060] usb usb1-port3: attempt power cycle
+[  +0.000017] xhci_hcd 0000:00:14.0: ERROR Transfer event for disabled endpoint slot 27 ep 0
+[  +0.000008] xhci_hcd 0000:00:14.0: @000000026fae3790 6f503c30 00000002 04000008 1b018001
+[  +0.652257] usb 1-3: new low-speed USB device number 29 using xhci_hcd
+[  +0.027808] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000013] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000008] usb 1-3: Product: RXThreshold
+[  +0.000006] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000827] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000228] USB ADC Sensor Driver ON, Minor = 0
+[Apr27 22:09] ADC file Opened
+[  +0.000015] Inside IOCTL
+[  +0.000006] cmd = 1 arg = 2
+[  +0.853321] usb 1-3: USB disconnect, device number 29
+[  +0.001599] USB ADC Removed
+[  +0.523178] usb 1-3: new low-speed USB device number 30 using xhci_hcd
+[  +0.000004] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000005] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000002] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +1.468138] usb 1-3: device descriptor read/64, error -71
+[  +1.252406] usb 1-3: device descriptor read/64, error -71
+[  +0.235503] usb 1-3: new low-speed USB device number 31 using xhci_hcd
+[  +0.000001] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000002] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000001] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000001] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000004] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000002] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.000002] xhci_hcd 0000:00:14.0: WARN urb submitted to disabled ep
+[  +0.128025] usb 1-3: device descriptor read/64, error -71
+[  +0.235970] usb 1-3: device descriptor read/64, error -71
+[  +0.108004] usb usb1-port3: attempt power cycle
+[  +0.000016] xhci_hcd 0000:00:14.0: ERROR Transfer event pointed to bad slot 30
+[  +0.000004] xhci_hcd 0000:00:14.0: @000000026fae3ed0 00000000 00000000 0c000000 1e018001
+[  +0.652499] usb 1-3: new low-speed USB device number 32 using xhci_hcd
+[  +0.031778] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000016] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000008] usb 1-3: Product: RXThreshold
+[  +0.000008] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000770] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000229] USB ADC Sensor Driver ON, Minor = 0
+[Apr27 22:15] usb 1-3: USB disconnect, device number 32
+[  +0.000310] USB ADC Removed
+[Apr27 22:17] usb 1-3: new low-speed USB device number 33 using xhci_hcd
+[  +0.155131] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000013] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000007] usb 1-3: Product: USBasp
+[  +0.000006] usb 1-3: Manufacturer: www.fischl.de
+[  +0.000992] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000337] USB ADC Sensor Driver ON, Minor = 0
+[ +17.006694] usb 1-3: USB disconnect, device number 33
+[  +0.000417] USB ADC Removed
+[Apr27 22:18] usb 1-3: new full-speed USB device number 34 using xhci_hcd
+[  +0.128442] usb 1-3: device descriptor read/64, error -71
+[  +0.235986] usb 1-3: device descriptor read/64, error -71
+[  +0.235990] usb 1-3: new full-speed USB device number 35 using xhci_hcd
+[  +0.128004] usb 1-3: device descriptor read/64, error -71
+[  +0.236016] usb 1-3: device descriptor read/64, error -71
+[  +0.108063] usb usb1-port3: attempt power cycle
+[  +0.651891] usb 1-3: new full-speed USB device number 36 using xhci_hcd
+[  +0.000429] usb 1-3: Device not responding to setup address.
+[  +0.207892] usb 1-3: Device not responding to setup address.
+[  +0.207657] usb 1-3: device not accepting address 36, error -71
+[  +0.128001] usb 1-3: new full-speed USB device number 37 using xhci_hcd
+[  +0.000381] usb 1-3: Device not responding to setup address.
+[  +0.207650] usb 1-3: Device not responding to setup address.
+[  +0.207931] usb 1-3: device not accepting address 37, error -71
+[  +0.000123] usb usb1-port3: unable to enumerate USB device
+[Apr27 22:19] usb 1-3: new full-speed USB device number 38 using xhci_hcd
+[  +0.128014] usb 1-3: device descriptor read/64, error -71
+[  +0.236011] usb 1-3: device descriptor read/64, error -71
+[  +0.235976] usb 1-3: new full-speed USB device number 39 using xhci_hcd
+[  +0.127997] usb 1-3: device descriptor read/64, error -71
+[  +0.235986] usb 1-3: device descriptor read/64, error -71
+[  +0.108055] usb usb1-port3: attempt power cycle
+[  +0.651883] usb 1-3: new full-speed USB device number 40 using xhci_hcd
+[  +0.000391] usb 1-3: Device not responding to setup address.
+[  +0.207308] usb 1-3: Device not responding to setup address.
+[  +0.208332] usb 1-3: device not accepting address 40, error -71
+[  +0.128006] usb 1-3: new full-speed USB device number 41 using xhci_hcd
+[  +0.000361] usb 1-3: Device not responding to setup address.
+[  +0.207875] usb 1-3: Device not responding to setup address.
+[  +0.207284] usb 1-3: device not accepting address 41, error -71
+[  +0.000095] usb usb1-port3: unable to enumerate USB device
+[Apr27 22:20] usb 1-3: new low-speed USB device number 42 using xhci_hcd
+[  +0.128016] usb 1-3: device descriptor read/64, error -71
+[  +0.236010] usb 1-3: device descriptor read/64, error -71
+[  +0.235956] usb 1-3: new full-speed USB device number 43 using xhci_hcd
+[  +0.128039] usb 1-3: device descriptor read/64, error -71
+[  +0.235910] usb 1-3: device descriptor read/64, error -71
+[  +0.108111] usb usb1-port3: attempt power cycle
+[  +0.651906] usb 1-3: new full-speed USB device number 44 using xhci_hcd
+[  +0.000202] usb 1-3: Device not responding to setup address.
+[  +0.207643] usb 1-3: Device not responding to setup address.
+[  +0.207724] usb 1-3: device not accepting address 44, error -71
+[  +0.128414] usb 1-3: new full-speed USB device number 45 using xhci_hcd
+[  +0.000326] usb 1-3: Device not responding to setup address.
+[  +0.207867] usb 1-3: Device not responding to setup address.
+[  +0.207805] usb 1-3: device not accepting address 45, error -71
+[  +0.000124] usb usb1-port3: unable to enumerate USB device
+[  +8.651727] usb 1-3: new full-speed USB device number 46 using xhci_hcd
+[  +0.128012] usb 1-3: device descriptor read/64, error -71
+[  +0.236014] usb 1-3: device descriptor read/64, error -71
+[  +0.235985] usb 1-3: new full-speed USB device number 47 using xhci_hcd
+[  +0.128009] usb 1-3: device descriptor read/64, error -71
+[  +0.235995] usb 1-3: device descriptor read/64, error -71
+[  +0.108050] usb usb1-port3: attempt power cycle
+[  +0.651909] usb 1-3: new full-speed USB device number 48 using xhci_hcd
+[  +0.000186] usb 1-3: Device not responding to setup address.
+[  +0.207951] usb 1-3: Device not responding to setup address.
+[  +0.207867] usb 1-3: device not accepting address 48, error -71
+[  +0.127985] usb 1-3: new full-speed USB device number 49 using xhci_hcd
+[  +0.000204] usb 1-3: Device not responding to setup address.
+[  +0.208180] usb 1-3: Device not responding to setup address.
+[  +0.207594] usb 1-3: device not accepting address 49, error -71
+[  +0.000113] usb usb1-port3: unable to enumerate USB device
+[Apr27 22:21] usb 1-3: new full-speed USB device number 50 using xhci_hcd
+[  +0.128470] usb 1-3: device descriptor read/64, error -71
+[  +0.236019] usb 1-3: device descriptor read/64, error -71
+[  +0.235963] usb 1-3: new full-speed USB device number 51 using xhci_hcd
+[  +0.128002] usb 1-3: device descriptor read/64, error -71
+[  +0.236032] usb 1-3: device descriptor read/64, error -71
+[  +0.108020] usb usb1-port3: attempt power cycle
+[  +0.651928] usb 1-3: new full-speed USB device number 52 using xhci_hcd
+[  +0.000187] usb 1-3: Device not responding to setup address.
+[  +0.207818] usb 1-3: Device not responding to setup address.
+[  +0.207974] usb 1-3: device not accepting address 52, error -71
+[  +0.128077] usb 1-3: new full-speed USB device number 53 using xhci_hcd
+[  +0.000369] usb 1-3: Device not responding to setup address.
+[  +0.207947] usb 1-3: Device not responding to setup address.
+[  +0.207589] usb 1-3: device not accepting address 53, error -71
+[  +0.000124] usb usb1-port3: unable to enumerate USB device
+[  +8.067783] usb 1-3: new low-speed USB device number 54 using xhci_hcd
+[  +0.128009] usb 1-3: device descriptor read/64, error -71
+[  +4.707919] usb 1-3: new full-speed USB device number 55 using xhci_hcd
+[  +0.127580] usb 1-3: device descriptor read/64, error -71
+[  +0.236450] usb 1-3: device descriptor read/64, error -71
+[  +0.235948] usb 1-3: new full-speed USB device number 56 using xhci_hcd
+[  +0.127595] usb 1-3: device descriptor read/64, error -71
+[  +0.236446] usb 1-3: device descriptor read/64, error -71
+[  +0.108095] usb usb1-port3: attempt power cycle
+[  +0.651860] usb 1-3: new full-speed USB device number 57 using xhci_hcd
+[  +0.000385] usb 1-3: Device not responding to setup address.
+[  +0.207521] usb 1-3: Device not responding to setup address.
+[  +0.208087] usb 1-3: device not accepting address 57, error -71
+[  +0.128008] usb 1-3: new full-speed USB device number 58 using xhci_hcd
+[  +0.000384] usb 1-3: Device not responding to setup address.
+[  +0.207948] usb 1-3: Device not responding to setup address.
+[  +0.207642] usb 1-3: device not accepting address 58, error -71
+[  +0.000128] usb usb1-port3: unable to enumerate USB device
+[  +6.871785] usb 1-3: new low-speed USB device number 59 using xhci_hcd
+[  +1.495959] usb 1-3: new full-speed USB device number 60 using xhci_hcd
+[  +0.128043] usb 1-3: device descriptor read/64, error -71
+[  +0.235987] usb 1-3: device descriptor read/64, error -71
+[  +0.235987] usb 1-3: new full-speed USB device number 61 using xhci_hcd
+[  +0.128013] usb 1-3: device descriptor read/64, error -71
+[  +0.236144] usb 1-3: device descriptor read/64, error -71
+[  +0.107900] usb usb1-port3: attempt power cycle
+[  +0.651460] usb 1-3: new full-speed USB device number 62 using xhci_hcd
+[  +0.000249] usb 1-3: Device not responding to setup address.
+[  +0.208004] usb 1-3: Device not responding to setup address.
+[  +0.207766] usb 1-3: device not accepting address 62, error -71
+[  +0.128436] usb 1-3: new full-speed USB device number 63 using xhci_hcd
+[  +0.000369] usb 1-3: Device not responding to setup address.
+[  +0.207950] usb 1-3: Device not responding to setup address.
+[  +0.207674] usb 1-3: device not accepting address 63, error -71
+[  +0.000143] usb usb1-port3: unable to enumerate USB device
+[Apr27 22:22] usb 1-3: new full-speed USB device number 64 using xhci_hcd
+[  +0.128020] usb 1-3: device descriptor read/64, error -71
+[  +0.235992] usb 1-3: device descriptor read/64, error -71
+[  +0.235991] usb 1-3: new full-speed USB device number 65 using xhci_hcd
+[  +0.128071] usb 1-3: device descriptor read/64, error -71
+[  +0.235963] usb 1-3: device descriptor read/64, error -71
+[  +0.108009] usb usb1-port3: attempt power cycle
+[  +0.651910] usb 1-3: new full-speed USB device number 66 using xhci_hcd
+[  +0.000158] usb 1-3: Device not responding to setup address.
+[  +0.207911] usb 1-3: Device not responding to setup address.
+[  +0.207949] usb 1-3: device not accepting address 66, error -71
+[  +0.127985] usb 1-3: new full-speed USB device number 67 using xhci_hcd
+[  +0.000166] usb 1-3: Device not responding to setup address.
+[  +0.207862] usb 1-3: Device not responding to setup address.
+[  +0.207828] usb 1-3: device not accepting address 67, error -71
+[  +0.000256] usb usb1-port3: unable to enumerate USB device
+[  +4.711843] usb 1-3: new full-speed USB device number 69 using xhci_hcd
+[  +0.128032] usb 1-3: device descriptor read/64, error -71
+[  +0.236001] usb 1-3: device descriptor read/64, error -71
+[  +0.511958] usb 1-3: new full-speed USB device number 70 using xhci_hcd
+[  +0.127925] usb 1-3: device descriptor read/64, error -71
+[  +0.235702] usb 1-3: device descriptor read/64, error -71
+[  +0.107984] usb usb1-port3: attempt power cycle
+[  +0.652378] usb 1-3: new full-speed USB device number 71 using xhci_hcd
+[  +0.000350] usb 1-3: Device not responding to setup address.
+[  +0.207681] usb 1-3: Device not responding to setup address.
+[  +0.207958] usb 1-3: device not accepting address 71, error -71
+[  +0.127986] usb 1-3: new full-speed USB device number 72 using xhci_hcd
+[  +0.000385] usb 1-3: Device not responding to setup address.
+[  +0.208024] usb 1-3: Device not responding to setup address.
+[  +0.207595] usb 1-3: device not accepting address 72, error -71
+[  +0.000099] usb usb1-port3: unable to enumerate USB device
+[  +3.851846] usb 1-3: new full-speed USB device number 73 using xhci_hcd
+[  +1.223519] usb 1-3: new full-speed USB device number 74 using xhci_hcd
+[  +1.028486] usb 1-3: device descriptor read/64, error -71
+[  +0.235986] usb 1-3: device descriptor read/64, error -71
+[  +0.108064] usb usb1-port3: attempt power cycle
+[  +0.651917] usb 1-3: new full-speed USB device number 75 using xhci_hcd
+[  +0.000366] usb 1-3: Device not responding to setup address.
+[  +0.208005] usb 1-3: Device not responding to setup address.
+[  +0.207618] usb 1-3: device not accepting address 75, error -71
+[  +0.128017] usb 1-3: new full-speed USB device number 76 using xhci_hcd
+[  +0.000361] usb 1-3: Device not responding to setup address.
+[  +0.208006] usb 1-3: Device not responding to setup address.
+[  +0.207606] usb 1-3: device not accepting address 76, error -71
+[  +0.000087] usb usb1-port3: unable to enumerate USB device
+[  +4.039860] usb 1-3: new full-speed USB device number 77 using xhci_hcd
+[  +0.128047] usb 1-3: device descriptor read/64, error -71
+[  +0.236016] usb 1-3: device descriptor read/64, error -71
+[  +0.235964] usb 1-3: new full-speed USB device number 78 using xhci_hcd
+[  +0.128013] usb 1-3: device descriptor read/64, error -71
+[  +0.236012] usb 1-3: device descriptor read/64, error -71
+[  +0.108007] usb usb1-port3: attempt power cycle
+[  +0.651972] usb 1-3: new full-speed USB device number 79 using xhci_hcd
+[  +0.000395] usb 1-3: Device not responding to setup address.
+[  +0.207537] usb 1-3: Device not responding to setup address.
+[  +0.208041] usb 1-3: device not accepting address 79, error -71
+[  +0.127992] usb 1-3: new full-speed USB device number 80 using xhci_hcd
+[  +0.000369] usb 1-3: Device not responding to setup address.
+[  +0.208008] usb 1-3: Device not responding to setup address.
+[  +0.207626] usb 1-3: device not accepting address 80, error -71
+[  +0.000100] usb usb1-port3: unable to enumerate USB device
+[Apr27 22:23] usb 1-3: new full-speed USB device number 81 using xhci_hcd
+[  +0.128036] usb 1-3: device descriptor read/64, error -71
+[  +0.236004] usb 1-3: device descriptor read/64, error -71
+[  +0.719919] usb 1-3: new full-speed USB device number 82 using xhci_hcd
+[  +0.128055] usb 1-3: device descriptor read/64, error -71
+[  +0.235976] usb 1-3: device descriptor read/64, error -71
+[  +0.108157] usb usb1-port3: attempt power cycle
+[  +0.651802] usb 1-3: new full-speed USB device number 83 using xhci_hcd
+[  +0.000196] usb 1-3: Device not responding to setup address.
+[  +0.207987] usb 1-3: Device not responding to setup address.
+[  +0.207399] usb 1-3: device not accepting address 83, error -71
+[  +0.128418] usb 1-3: new full-speed USB device number 84 using xhci_hcd
+[  +0.000191] usb 1-3: Device not responding to setup address.
+[  +0.207589] usb 1-3: Device not responding to setup address.
+[  +0.208243] usb 1-3: device not accepting address 84, error -71
+[  +0.000098] usb usb1-port3: unable to enumerate USB device
+[ +11.295773] usb 1-3: new low-speed USB device number 85 using xhci_hcd
+[  +0.128022] usb 1-3: device descriptor read/64, error -71
+[  +0.236022] usb 1-3: device descriptor read/64, error -71
+[  +0.235971] usb 1-3: new low-speed USB device number 86 using xhci_hcd
+[  +0.128027] usb 1-3: device descriptor read/64, error -71
+[  +0.236000] usb 1-3: device descriptor read/64, error -71
+[  +0.108026] usb usb1-port3: attempt power cycle
+[  +0.651414] usb 1-3: new low-speed USB device number 87 using xhci_hcd
+[  +0.000646] usb 1-3: Device not responding to setup address.
+[  +0.208459] usb 1-3: Device not responding to setup address.
+[  +0.207031] usb 1-3: device not accepting address 87, error -71
+[  +0.612373] usb 1-3: new full-speed USB device number 88 using xhci_hcd
+[  +0.000243] usb 1-3: Device not responding to setup address.
+[  +0.207975] usb 1-3: Device not responding to setup address.
+[  +0.207756] usb 1-3: device not accepting address 88, error -71
+[  +0.000121] usb usb1-port3: unable to enumerate USB device
+[  +1.059456] usb 1-3: new full-speed USB device number 89 using xhci_hcd
+[  +0.128446] usb 1-3: device descriptor read/64, error -71
+[  +0.235989] usb 1-3: device descriptor read/64, error -71
+[  +0.235518] usb 1-3: new full-speed USB device number 90 using xhci_hcd
+[  +0.128508] usb 1-3: device descriptor read/64, error -71
+[  +0.235562] usb 1-3: device descriptor read/64, error -71
+[  +0.108434] usb usb1-port3: attempt power cycle
+[  +0.651483] usb 1-3: new full-speed USB device number 91 using xhci_hcd
+[  +0.000123] usb 1-3: Device not responding to setup address.
+[  +0.208541] usb 1-3: Device not responding to setup address.
+[  +0.207810] usb 1-3: device not accepting address 91, error -71
+[  +0.127986] usb 1-3: new full-speed USB device number 92 using xhci_hcd
+[  +0.000224] usb 1-3: Device not responding to setup address.
+[  +0.207981] usb 1-3: Device not responding to setup address.
+[  +0.207803] usb 1-3: device not accepting address 92, error -71
+[  +0.000099] usb usb1-port3: unable to enumerate USB device
+[  +8.160230] usb 1-3: new full-speed USB device number 93 using xhci_hcd
+[  +0.127617] usb 1-3: device descriptor read/64, error -71
+[  +0.235975] usb 1-3: device descriptor read/64, error -71
+[  +0.236011] usb 1-3: new full-speed USB device number 94 using xhci_hcd
+[  +0.128002] usb 1-3: device descriptor read/64, error -71
+[  +0.235944] usb 1-3: device descriptor read/64, error -71
+[  +0.108067] usb usb1-port3: attempt power cycle
+[  +0.651950] usb 1-3: new full-speed USB device number 95 using xhci_hcd
+[  +0.000326] usb 1-3: Device not responding to setup address.
+[  +0.207872] usb 1-3: Device not responding to setup address.
+[  +0.207794] usb 1-3: device not accepting address 95, error -71
+[  +0.128006] usb 1-3: new full-speed USB device number 96 using xhci_hcd
+[  +0.000330] usb 1-3: Device not responding to setup address.
+[  +0.207846] usb 1-3: Device not responding to setup address.
+[  +0.207811] usb 1-3: device not accepting address 96, error -71
+[  +0.000086] usb usb1-port3: unable to enumerate USB device
+[Apr27 22:24] usb 1-3: new full-speed USB device number 97 using xhci_hcd
+[  +0.128067] usb 1-3: device descriptor read/64, error -71
+[  +0.235985] usb 1-3: device descriptor read/64, error -71
+[  +0.235811] usb 1-3: new full-speed USB device number 98 using xhci_hcd
+[  +0.128157] usb 1-3: device descriptor read/64, error -71
+[  +0.236024] usb 1-3: device descriptor read/64, error -71
+[  +0.108019] usb usb1-port3: attempt power cycle
+[  +0.651903] usb 1-3: new full-speed USB device number 99 using xhci_hcd
+[  +0.000469] usb 1-3: Device not responding to setup address.
+[  +0.207893] usb 1-3: Device not responding to setup address.
+[  +0.207656] usb 1-3: device not accepting address 99, error -71
+[  +0.128012] usb 1-3: new full-speed USB device number 100 using xhci_hcd
+[  +0.000374] usb 1-3: Device not responding to setup address.
+[  +0.207991] usb 1-3: Device not responding to setup address.
+[  +0.207627] usb 1-3: device not accepting address 100, error -71
+[  +0.000100] usb usb1-port3: unable to enumerate USB device
+[Apr27 22:25] usb 1-3: new low-speed USB device number 101 using xhci_hcd
+[  +0.128029] usb 1-3: device descriptor read/64, error -71
+[  +0.263033] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000015] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000009] usb 1-3: Product: RXThreshold
+[  +0.000007] usb 1-3: Manufacturer: www.obdev.at
+[  +0.001150] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000233] USB ADC Sensor Driver ON, Minor = 0
+[ +42.124400] ADC file Opened
+[  +0.000021] Inside IOCTL
+[  +0.000009] cmd = 1 arg = 500
+[  +3.140095] ADC file Closed
+[Apr27 22:26] ADC file Opened
+[  +0.000019] Inside IOCTL
+[  +0.000006] cmd = 1 arg = 100
+[  +3.139206] ADC file Closed
+[  +4.197788] ADC file Opened
+[  +0.000015] Inside IOCTL
+[  +0.000005] cmd = 1 arg = 1000
+[  +3.140461] ADC file Closed
+[  +4.752936] ADC file Opened
+[  +0.000012] Inside IOCTL
+[  +0.000004] cmd = 1 arg = 1023
+[  +3.141236] ADC file Closed
+[  +6.208385] ADC file Opened
+[  +0.000015] Inside IOCTL
+[  +0.000006] cmd = 1 arg = 5
+[  +3.143766] ADC file Closed
+[Apr27 22:28] ADC file Opened
+[  +0.000018] Inside IOCTL
+[  +0.000007] cmd = 1 arg = 100
+[  +3.143911] ADC file Closed
+[  +8.661787] ADC file Opened
+[  +0.000013] Inside IOCTL
+[  +0.000005] cmd = 1 arg = 0
+[  +3.145576] ADC file Closed
+[  +4.402357] ADC file Opened
+[  +0.000019] Inside IOCTL
+[  +0.000006] cmd = 1 arg = 11111
+[  +3.145572] ADC file Closed
+[  +8.716982] ADC file Opened
+[  +0.000018] Inside IOCTL
+[  +0.000007] cmd = 1 arg = 3009548743
+[Apr27 22:29] ADC file Closed
+[Apr27 22:30] usb 1-3: USB disconnect, device number 101
+[  +0.000363] USB ADC Removed
+[Apr27 22:31] usb 1-3: new low-speed USB device number 102 using xhci_hcd
+[  +0.155446] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000049] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000008] usb 1-3: Product: USBasp
+[  +0.000008] usb 1-3: Manufacturer: www.fischl.de
+[  +0.000945] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000258] USB ADC Sensor Driver ON, Minor = 0
+[ +18.160006] usb 1-3: USB disconnect, device number 102
+[  +0.000391] USB ADC Removed
+[Apr27 22:32] usb 1-3: new full-speed USB device number 103 using xhci_hcd
+[  +0.127583] usb 1-3: device descriptor read/64, error -71
+[  +0.236397] usb 1-3: device descriptor read/64, error -71
+[  +0.236006] usb 1-3: new full-speed USB device number 104 using xhci_hcd
+[  +0.127536] usb 1-3: device descriptor read/64, error -71
+[  +0.236459] usb 1-3: device descriptor read/64, error -71
+[  +0.108111] usb usb1-port3: attempt power cycle
+[  +0.651857] usb 1-3: new full-speed USB device number 105 using xhci_hcd
+[  +0.000386] usb 1-3: Device not responding to setup address.
+[  +0.207350] usb 1-3: Device not responding to setup address.
+[  +0.208222] usb 1-3: device not accepting address 105, error -71
+[  +0.128004] usb 1-3: new full-speed USB device number 106 using xhci_hcd
+[  +0.000359] usb 1-3: Device not responding to setup address.
+[  +0.208000] usb 1-3: Device not responding to setup address.
+[  +0.207633] usb 1-3: device not accepting address 106, error -71
+[  +0.000088] usb usb1-port3: unable to enumerate USB device
+[  +8.603674] usb 1-3: new full-speed USB device number 107 using xhci_hcd
+[  +0.127883] usb 1-3: device descriptor read/64, error -71
+[  +0.236148] usb 1-3: device descriptor read/64, error -71
+[  +0.235995] usb 1-3: new full-speed USB device number 108 using xhci_hcd
+[  +0.128027] usb 1-3: device descriptor read/64, error -71
+[  +0.235996] usb 1-3: device descriptor read/64, error -71
+[  +0.108006] usb usb1-port3: attempt power cycle
+[  +0.651941] usb 1-3: new full-speed USB device number 109 using xhci_hcd
+[  +0.000416] usb 1-3: Device not responding to setup address.
+[  +0.208013] usb 1-3: Device not responding to setup address.
+[  +0.207577] usb 1-3: device not accepting address 109, error -71
+[  +0.127843] usb 1-3: new full-speed USB device number 110 using xhci_hcd
+[  +0.000376] usb 1-3: Device not responding to setup address.
+[  +0.208147] usb 1-3: Device not responding to setup address.
+[  +0.207610] usb 1-3: device not accepting address 110, error -71
+[  +0.000087] usb usb1-port3: unable to enumerate USB device
+[Apr27 22:33] usb 1-3: new low-speed USB device number 111 using xhci_hcd
+[  +0.128018] usb 1-3: device descriptor read/64, error -71
+[  +0.363947] usb 1-3: new full-speed USB device number 112 using xhci_hcd
+[  +0.128037] usb 1-3: device descriptor read/64, error -71
+[  +0.235992] usb 1-3: device descriptor read/64, error -71
+[  +0.108016] usb usb1-port3: attempt power cycle
+[  +0.651953] usb 1-3: new full-speed USB device number 113 using xhci_hcd
+[  +0.000387] usb 1-3: Device not responding to setup address.
+[  +0.207925] usb 1-3: Device not responding to setup address.
+[  +0.207179] usb 1-3: device not accepting address 113, error -71
+[  +0.128485] usb 1-3: new full-speed USB device number 114 using xhci_hcd
+[  +0.000371] usb 1-3: Device not responding to setup address.
+[  +0.208007] usb 1-3: Device not responding to setup address.
+[  +0.207620] usb 1-3: device not accepting address 114, error -71
+[  +0.000100] usb usb1-port3: unable to enumerate USB device
+[ +32.115147] usb 1-3: new low-speed USB device number 115 using xhci_hcd
+[  +0.128030] usb 1-3: device descriptor read/64, error -71
+[  +0.236028] usb 1-3: device descriptor read/64, error -71
+[  +0.511447] usb 1-3: new low-speed USB device number 116 using xhci_hcd
+[  +0.155800] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000013] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000008] usb 1-3: Product: RXThreshold
+[  +0.000006] usb 1-3: Manufacturer: www.obdev.at
+[  +0.001099] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000208] USB ADC Sensor Driver ON, Minor = 0
+[Apr27 22:34] ADC file Opened
+[  +0.000021] Inside IOCTL
+[  +0.000008] cmd = 1 arg = 200
+[  +0.000423] ADC file Closed
+[  +4.809804] ADC file Opened
+[  +0.000019] Inside IOCTL
+[  +0.000006] cmd = 1 arg = 500
+[  +0.000428] ADC file Closed
+[ +15.073905] ADC file Opened
+[  +0.000021] Inside IOCTL
+[  +0.000008] cmd = 1 arg = 122
+[  +0.000767] ADC file Closed
+[  +6.542373] usb 1-3: USB disconnect, device number 116
+[  +0.000250] USB ADC Removed
+[Apr27 22:36] usb 1-3: new low-speed USB device number 117 using xhci_hcd
+[  +0.155307] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000013] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000007] usb 1-3: Product: USBasp
+[  +0.000007] usb 1-3: Manufacturer: www.fischl.de
+[  +0.001132] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000169] USB ADC Sensor Driver ON, Minor = 0
+[Apr27 22:37] usb 1-3: USB disconnect, device number 117
+[  +0.000319] USB ADC Removed
+[Apr27 22:38] usb 1-3: new low-speed USB device number 118 using xhci_hcd
+[  +0.128046] usb 1-3: device descriptor read/64, error -71
+[  +0.235986] usb 1-3: device descriptor read/64, error -71
+[  +0.235950] usb 1-3: new low-speed USB device number 119 using xhci_hcd
+[  +0.128027] usb 1-3: device descriptor read/64, error -71
+[  +0.235997] usb 1-3: device descriptor read/64, error -71
+[  +0.107629] usb usb1-port3: attempt power cycle
+[  +0.652327] usb 1-3: new low-speed USB device number 120 using xhci_hcd
+[  +0.000611] usb 1-3: Device not responding to setup address.
+[  +0.207569] usb 1-3: Device not responding to setup address.
+[  +0.207331] usb 1-3: device not accepting address 120, error -71
+[  +0.128061] usb 1-3: new low-speed USB device number 121 using xhci_hcd
+[  +0.000568] usb 1-3: Device not responding to setup address.
+[  +0.208473] usb 1-3: Device not responding to setup address.
+[  +0.207388] usb 1-3: device not accepting address 121, error -71
+[  +0.000142] usb usb1-port3: unable to enumerate USB device
+[  +3.387795] usb 1-3: new low-speed USB device number 122 using xhci_hcd
+[  +2.711960] usb 1-3: new low-speed USB device number 123 using xhci_hcd
+[  +0.127926] usb 1-3: device descriptor read/64, error -71
+[  +0.236121] usb 1-3: device descriptor read/64, error -71
+[  +0.235956] usb 1-3: new low-speed USB device number 124 using xhci_hcd
+[  +0.128024] usb 1-3: device descriptor read/64, error -71
+[  +0.236015] usb 1-3: device descriptor read/64, error -71
+[  +0.107993] usb usb1-port3: attempt power cycle
+[  +0.651936] usb 1-3: new low-speed USB device number 125 using xhci_hcd
+[  +0.001726] usb 1-3: Device not responding to setup address.
+[  +0.207341] usb 1-3: Device not responding to setup address.
+[  +0.206566] usb 1-3: device not accepting address 125, error -71
+[  +0.128369] usb 1-3: new low-speed USB device number 126 using xhci_hcd
+[  +0.001730] usb 1-3: Device not responding to setup address.
+[  +0.207896] usb 1-3: Device not responding to setup address.
+[  +0.206346] usb 1-3: device not accepting address 126, error -71
+[  +0.000122] usb usb1-port3: unable to enumerate USB device
+[Apr27 22:39] usb 1-3: new low-speed USB device number 127 using xhci_hcd
+[  +0.128038] usb 1-3: device descriptor read/64, error -71
+[  +0.236432] usb 1-3: device descriptor read/64, error -71
+[  +0.235954] usb 1-3: new low-speed USB device number 3 using xhci_hcd
+[  +0.128034] usb 1-3: device descriptor read/64, error -71
+[  +0.235934] usb 1-3: device descriptor read/64, error -71
+[  +0.108089] usb usb1-port3: attempt power cycle
+[  +0.651953] usb 1-3: new low-speed USB device number 6 using xhci_hcd
+[  +0.001892] usb 1-3: Device not responding to setup address.
+[  +0.208004] usb 1-3: Device not responding to setup address.
+[  +0.206089] usb 1-3: device not accepting address 6, error -71
+[  +0.127990] usb 1-3: new low-speed USB device number 7 using xhci_hcd
+[  +0.001910] usb 1-3: Device not responding to setup address.
+[  +0.208021] usb 1-3: Device not responding to setup address.
+[  +0.206073] usb 1-3: device not accepting address 7, error -71
+[  +0.000141] usb usb1-port3: unable to enumerate USB device
+[  +2.927805] usb 1-3: new low-speed USB device number 8 using xhci_hcd
+[  +0.128051] usb 1-3: device descriptor read/64, error -71
+[  +0.235520] usb 1-3: device descriptor read/64, error -71
+[  +0.236007] usb 1-3: new low-speed USB device number 9 using xhci_hcd
+[  +0.128443] usb 1-3: device descriptor read/64, error -71
+[  +0.235993] usb 1-3: device descriptor read/64, error -71
+[  +0.108017] usb usb1-port3: attempt power cycle
+[  +0.651944] usb 1-3: new low-speed USB device number 10 using xhci_hcd
+[  +0.001627] usb 1-3: Device not responding to setup address.
+[  +0.208388] usb 1-3: Device not responding to setup address.
+[  +0.205978] usb 1-3: device not accepting address 10, error -71
+[  +0.128027] usb 1-3: new low-speed USB device number 11 using xhci_hcd
+[  +0.001988] usb 1-3: Device not responding to setup address.
+[  +0.208017] usb 1-3: Device not responding to setup address.
+[  +0.205958] usb 1-3: device not accepting address 11, error -71
+[  +0.000086] usb usb1-port3: unable to enumerate USB device
+[ +35.619435] usb 1-3: new low-speed USB device number 12 using xhci_hcd
+[  +0.128034] usb 1-3: device descriptor read/64, error -71
+[  +0.235993] usb 1-3: device descriptor read/64, error -71
+[  +0.235538] usb 1-3: new low-speed USB device number 13 using xhci_hcd
+[  +0.128459] usb 1-3: device descriptor read/64, error -71
+[  +0.236015] usb 1-3: device descriptor read/64, error -71
+[  +0.107989] usb usb1-port3: attempt power cycle
+[  +0.651935] usb 1-3: new low-speed USB device number 14 using xhci_hcd
+[  +0.000602] usb 1-3: Device not responding to setup address.
+[  +0.208035] usb 1-3: Device not responding to setup address.
+[  +0.207386] usb 1-3: device not accepting address 14, error -71
+[  +0.127544] usb 1-3: new low-speed USB device number 15 using xhci_hcd
+[  +0.000764] usb 1-3: Device not responding to setup address.
+[  +0.208011] usb 1-3: Device not responding to setup address.
+[  +0.207671] usb 1-3: device not accepting address 15, error -71
+[  +0.000101] usb usb1-port3: unable to enumerate USB device
+[  +5.287838] usb 1-3: new low-speed USB device number 16 using xhci_hcd
+[  +0.336029] usb 1-3: device descriptor read/64, error -71
+[  +0.511993] usb 1-3: device descriptor read/64, error -71
+[  +0.235980] usb 1-3: new low-speed USB device number 17 using xhci_hcd
+[  +0.127993] usb 1-3: device descriptor read/64, error -71
+[  +0.236000] usb 1-3: device descriptor read/64, error -71
+[  +0.108011] usb usb1-port3: attempt power cycle
+[  +0.651934] usb 1-3: new low-speed USB device number 18 using xhci_hcd
+[  +0.000603] usb 1-3: Device not responding to setup address.
+[Apr27 22:40] usb 1-3: Device not responding to setup address.
+[  +0.207581] usb 1-3: device not accepting address 18, error -71
+[  +0.127998] usb 1-3: new low-speed USB device number 19 using xhci_hcd
+[  +0.000610] usb 1-3: Device not responding to setup address.
+[  +0.207959] usb 1-3: Device not responding to setup address.
+[  +0.207407] usb 1-3: device not accepting address 19, error -71
+[  +0.000086] usb usb1-port3: unable to enumerate USB device
+[  +5.523863] usb 1-3: new low-speed USB device number 20 using xhci_hcd
+[  +0.128012] usb 1-3: device descriptor read/64, error -71
+[  +0.236021] usb 1-3: device descriptor read/64, error -71
+[  +0.235948] usb 1-3: new low-speed USB device number 21 using xhci_hcd
+[  +0.820032] usb 1-3: device descriptor read/64, error -71
+[  +0.235977] usb 1-3: device descriptor read/64, error -71
+[  +0.108001] usb usb1-port3: attempt power cycle
+[  +0.651982] usb 1-3: new low-speed USB device number 22 using xhci_hcd
+[  +0.000610] usb 1-3: Device not responding to setup address.
+[  +0.207940] usb 1-3: Device not responding to setup address.
+[  +0.207422] usb 1-3: device not accepting address 22, error -71
+[  +0.127991] usb 1-3: new low-speed USB device number 23 using xhci_hcd
+[  +0.000600] usb 1-3: Device not responding to setup address.
+[  +0.208002] usb 1-3: Device not responding to setup address.
+[  +0.207397] usb 1-3: device not accepting address 23, error -71
+[  +0.000088] usb usb1-port3: unable to enumerate USB device
+[ +12.207779] usb 1-3: new low-speed USB device number 24 using xhci_hcd
+[  +0.128009] usb 1-3: device descriptor read/64, error -71
+[  +0.236045] usb 1-3: device descriptor read/64, error -71
+[  +0.235923] usb 1-3: new low-speed USB device number 25 using xhci_hcd
+[  +0.128052] usb 1-3: device descriptor read/64, error -71
+[  +0.235996] usb 1-3: device descriptor read/64, error -71
+[  +0.108004] usb usb1-port3: attempt power cycle
+[  +0.651947] usb 1-3: new low-speed USB device number 26 using xhci_hcd
+[  +0.000711] usb 1-3: Device not responding to setup address.
+[  +0.208005] usb 1-3: Device not responding to setup address.
+[  +0.207253] usb 1-3: device not accepting address 26, error -71
+[  +0.127681] usb 1-3: new low-speed USB device number 27 using xhci_hcd
+[  +0.000656] usb 1-3: Device not responding to setup address.
+[  +0.208426] usb 1-3: Device not responding to setup address.
+[  +0.207239] usb 1-3: device not accepting address 27, error -71
+[  +0.000085] usb usb1-port3: unable to enumerate USB device
+[  +0.767494] usb 1-3: new low-speed USB device number 28 using xhci_hcd
+[  +0.128440] usb 1-3: device descriptor read/64, error -71
+[  +2.215955] usb 1-3: new low-speed USB device number 29 using xhci_hcd
+[  +0.128037] usb 1-3: device descriptor read/64, error -71
+[  +1.543924] usb 1-3: new low-speed USB device number 30 using xhci_hcd
+[  +0.128064] usb 1-3: device descriptor read/64, error -71
+[  +0.236000] usb 1-3: device descriptor read/64, error -71
+[  +0.235952] usb 1-3: new low-speed USB device number 31 using xhci_hcd
+[  +0.128017] usb 1-3: device descriptor read/64, error -71
+[  +0.235997] usb 1-3: device descriptor read/64, error -71
+[  +0.108116] usb usb1-port3: attempt power cycle
+[  +0.651838] usb 1-3: new low-speed USB device number 32 using xhci_hcd
+[  +0.000044] usb 1-3: Device not responding to setup address.
+[  +0.207978] usb 1-3: Device not responding to setup address.
+[  +0.207971] usb 1-3: device not accepting address 32, error -71
+[  +0.336017] usb 1-3: new low-speed USB device number 33 using xhci_hcd
+[  +0.000660] usb 1-3: Device not responding to setup address.
+[  +0.208181] usb 1-3: Device not responding to setup address.
+[  +0.207136] usb 1-3: device not accepting address 33, error -71
+[  +0.000086] usb usb1-port3: unable to enumerate USB device
+[  +6.211860] usb 1-3: new low-speed USB device number 34 using xhci_hcd
+[  +0.128045] usb 1-3: device descriptor read/64, error -71
+[  +0.235976] usb 1-3: device descriptor read/64, error -71
+[  +0.235966] usb 1-3: new low-speed USB device number 35 using xhci_hcd
+[  +0.128002] usb 1-3: device descriptor read/64, error -71
+[  +0.236018] usb 1-3: device descriptor read/64, error -71
+[  +0.108000] usb usb1-port3: attempt power cycle
+[  +0.651965] usb 1-3: new low-speed USB device number 36 using xhci_hcd
+[  +0.000964] usb 1-3: Device not responding to setup address.
+[  +0.207697] usb 1-3: Device not responding to setup address.
+[  +0.207326] usb 1-3: device not accepting address 36, error -71
+[  +0.128009] usb 1-3: new low-speed USB device number 37 using xhci_hcd
+[  +0.000968] usb 1-3: Device not responding to setup address.
+[  +0.207683] usb 1-3: Device not responding to setup address.
+[  +0.207333] usb 1-3: device not accepting address 37, error -71
+[  +0.000100] usb usb1-port3: unable to enumerate USB device
+[  +9.555785] usb 1-3: new low-speed USB device number 38 using xhci_hcd
+[  +0.128039] usb 1-3: device descriptor read/64, error -71
+[  +0.236007] usb 1-3: device descriptor read/64, error -71
+[  +0.235529] usb 1-3: new low-speed USB device number 39 using xhci_hcd
+[  +0.128432] usb 1-3: device descriptor read/64, error -71
+[  +0.235745] usb 1-3: device descriptor read/64, error -71
+[  +0.108288] usb usb1-port3: attempt power cycle
+[  +0.651941] usb 1-3: new low-speed USB device number 40 using xhci_hcd
+[  +0.000673] usb 1-3: Device not responding to setup address.
+[  +0.207637] usb 1-3: Device not responding to setup address.
+[  +0.207672] usb 1-3: device not accepting address 40, error -71
+[  +0.127996] usb 1-3: new low-speed USB device number 41 using xhci_hcd
+[  +0.000852] usb 1-3: Device not responding to setup address.
+[  +0.207643] usb 1-3: Device not responding to setup address.
+[  +0.207489] usb 1-3: device not accepting address 41, error -71
+[  +0.000075] usb usb1-port3: unable to enumerate USB device
+[Apr27 22:41] usb 1-3: new low-speed USB device number 42 using xhci_hcd
+[  +0.127563] usb 1-3: device descriptor read/64, error -71
+[  +0.236452] usb 1-3: device descriptor read/64, error -71
+[  +0.236014] usb 1-3: new low-speed USB device number 43 using xhci_hcd
+[  +0.128008] usb 1-3: device descriptor read/64, error -71
+[  +0.235926] usb 1-3: device descriptor read/64, error -71
+[  +0.108071] usb usb1-port3: attempt power cycle
+[  +0.651965] usb 1-3: new low-speed USB device number 44 using xhci_hcd
+[  +0.000632] usb 1-3: Device not responding to setup address.
+[  +0.207381] usb 1-3: Device not responding to setup address.
+[  +0.207569] usb 1-3: device not accepting address 44, error -71
+[  +0.752386] usb 1-3: new low-speed USB device number 45 using xhci_hcd
+[  +0.000617] usb 1-3: Device not responding to setup address.
+[  +0.207978] usb 1-3: Device not responding to setup address.
+[  +0.207404] usb 1-3: device not accepting address 45, error -71
+[  +0.000087] usb usb1-port3: unable to enumerate USB device
+[  +0.479932] usb 1-3: new low-speed USB device number 46 using xhci_hcd
+[  +0.128032] usb 1-3: device descriptor read/64, error -71
+[  +0.235802] usb 1-3: device descriptor read/64, error -71
+[  +0.236121] usb 1-3: new low-speed USB device number 47 using xhci_hcd
+[  +0.127653] usb 1-3: device descriptor read/64, error -71
+[  +0.236385] usb 1-3: device descriptor read/64, error -71
+[  +0.107810] usb usb1-port3: attempt power cycle
+[  +0.652171] usb 1-3: new low-speed USB device number 48 using xhci_hcd
+[  +0.001280] usb 1-3: Device not responding to setup address.
+[  +0.207725] usb 1-3: Device not responding to setup address.
+[  +0.206964] usb 1-3: device not accepting address 48, error -71
+[  +0.128010] usb 1-3: new low-speed USB device number 49 using xhci_hcd
+[  +0.001137] usb 1-3: Device not responding to setup address.
+[  +0.207924] usb 1-3: Device not responding to setup address.
+[  +0.206942] usb 1-3: device not accepting address 49, error -71
+[  +0.000100] usb usb1-port3: unable to enumerate USB device
+[  +3.207843] usb 1-3: new low-speed USB device number 50 using xhci_hcd
+[  +0.128033] usb 1-3: device descriptor read/64, error -71
+[  +0.236027] usb 1-3: device descriptor read/64, error -71
+[  +0.235961] usb 1-3: new low-speed USB device number 51 using xhci_hcd
+[  +0.128007] usb 1-3: device descriptor read/64, error -71
+[  +0.236031] usb 1-3: device descriptor read/64, error -71
+[  +0.107594] usb usb1-port3: attempt power cycle
+[  +0.651934] usb 1-3: new low-speed USB device number 52 using xhci_hcd
+[  +0.002013] usb 1-3: Device not responding to setup address.
+[  +0.207734] usb 1-3: Device not responding to setup address.
+[  +0.206665] usb 1-3: device not accepting address 52, error -71
+[  +0.127984] usb 1-3: new low-speed USB device number 53 using xhci_hcd
+[  +0.001673] usb 1-3: Device not responding to setup address.
+[  +0.208015] usb 1-3: Device not responding to setup address.
+[  +0.206299] usb 1-3: device not accepting address 53, error -71
+[  +0.000085] usb usb1-port3: unable to enumerate USB device
+[ +23.723635] usb 1-3: new low-speed USB device number 54 using xhci_hcd
+[  +0.128045] usb 1-3: device descriptor read/64, error -71
+[  +0.235580] usb 1-3: device descriptor read/64, error -71
+[  +0.236397] usb 1-3: new low-speed USB device number 55 using xhci_hcd
+[  +0.128095] usb 1-3: device descriptor read/64, error -71
+[  +0.235936] usb 1-3: device descriptor read/64, error -71
+[  +0.107989] usb usb1-port3: attempt power cycle
+[  +0.651953] usb 1-3: new low-speed USB device number 56 using xhci_hcd
+[  +0.001610] usb 1-3: Device not responding to setup address.
+[  +0.208291] usb 1-3: Device not responding to setup address.
+[  +0.206109] usb 1-3: device not accepting address 56, error -71
+[  +0.127985] usb 1-3: new low-speed USB device number 57 using xhci_hcd
+[  +0.001141] usb 1-3: Device not responding to setup address.
+[  +0.208167] usb 1-3: Device not responding to setup address.
+[  +0.206683] usb 1-3: device not accepting address 57, error -71
+[  +0.000087] usb usb1-port3: unable to enumerate USB device
+[Apr27 22:42] usb 1-3: new low-speed USB device number 58 using xhci_hcd
+[  +0.128034] usb 1-3: device descriptor read/64, error -71
+[  +0.235989] usb 1-3: device descriptor read/64, error -71
+[  +0.235963] usb 1-3: new low-speed USB device number 59 using xhci_hcd
+[  +0.127643] usb 1-3: device descriptor read/64, error -71
+[  +0.236420] usb 1-3: device descriptor read/64, error -71
+[  +0.108007] usb usb1-port3: attempt power cycle
+[  +1.067909] usb 1-3: new low-speed USB device number 60 using xhci_hcd
+[  +0.000586] usb 1-3: Device not responding to setup address.
+[  +0.207438] usb 1-3: Device not responding to setup address.
+[  +0.207982] usb 1-3: device not accepting address 60, error -71
+[  +0.128029] usb 1-3: new low-speed USB device number 61 using xhci_hcd
+[  +0.002167] usb 1-3: Device not responding to setup address.
+[  +0.206410] usb 1-3: Device not responding to setup address.
+[  +0.207391] usb 1-3: device not accepting address 61, error -71
+[  +0.000086] usb usb1-port3: unable to enumerate USB device
+[  +5.035361] usb 1-3: new low-speed USB device number 62 using xhci_hcd
+[  +0.128066] usb 1-3: device descriptor read/64, error -71
+[  +1.136443] usb 1-3: device descriptor read/64, error -71
+[  +0.235973] usb 1-3: new low-speed USB device number 63 using xhci_hcd
+[  +0.127818] usb 1-3: device descriptor read/64, error -71
+[  +0.236202] usb 1-3: device descriptor read/64, error -71
+[  +0.108016] usb usb1-port3: attempt power cycle
+[  +0.651970] usb 1-3: new low-speed USB device number 64 using xhci_hcd
+[  +0.000633] usb 1-3: Device not responding to setup address.
+[  +0.207393] usb 1-3: Device not responding to setup address.
+[  +0.207942] usb 1-3: device not accepting address 64, error -71
+[  +0.128029] usb 1-3: new low-speed USB device number 65 using xhci_hcd
+[  +0.000626] usb 1-3: Device not responding to setup address.
+[  +0.207376] usb 1-3: Device not responding to setup address.
+[  +0.207988] usb 1-3: device not accepting address 65, error -71
+[  +0.000098] usb usb1-port3: unable to enumerate USB device
+[ +10.351758] usb 1-3: new low-speed USB device number 66 using xhci_hcd
+[  +0.127655] usb 1-3: device descriptor read/64, error -71
+[  +0.236382] usb 1-3: device descriptor read/64, error -71
+[  +0.235991] usb 1-3: new low-speed USB device number 67 using xhci_hcd
+[  +0.127998] usb 1-3: device descriptor read/64, error -71
+[  +0.236000] usb 1-3: device descriptor read/64, error -71
+[  +0.108014] usb usb1-port3: attempt power cycle
+[  +2.611931] usb 1-3: new low-speed USB device number 69 using xhci_hcd
+[  +0.127872] usb 1-3: device descriptor read/64, error -71
+[  +0.236138] usb 1-3: device descriptor read/64, error -71
+[  +0.235520] usb 1-3: new low-speed USB device number 70 using xhci_hcd
+[  +0.128488] usb 1-3: device descriptor read/64, error -71
+[  +0.235999] usb 1-3: device descriptor read/64, error -71
+[  +0.108032] usb usb1-port3: attempt power cycle
+[  +0.651508] usb 1-3: new low-speed USB device number 71 using xhci_hcd
+[  +0.001820] usb 1-3: Device not responding to setup address.
+[  +0.208389] usb 1-3: Device not responding to setup address.
+[  +0.206192] usb 1-3: device not accepting address 71, error -71
+[  +0.128006] usb 1-3: new low-speed USB device number 72 using xhci_hcd
+[  +0.001386] usb 1-3: Device not responding to setup address.
+[  +0.208396] usb 1-3: Device not responding to setup address.
+[  +0.206220] usb 1-3: device not accepting address 72, error -71
+[  +0.000087] usb usb1-port3: unable to enumerate USB device
+[  +7.387841] usb 1-3: new low-speed USB device number 73 using xhci_hcd
+[  +0.128030] usb 1-3: device descriptor read/64, error -71
+[  +0.236014] usb 1-3: device descriptor read/64, error -71
+[  +0.235937] usb 1-3: new low-speed USB device number 74 using xhci_hcd
+[  +0.127618] usb 1-3: device descriptor read/64, error -71
+[  +0.236398] usb 1-3: device descriptor read/64, error -71
+[  +0.107926] usb usb1-port3: attempt power cycle
+[  +0.652078] usb 1-3: new low-speed USB device number 75 using xhci_hcd
+[  +0.001036] usb 1-3: Device not responding to setup address.
+[  +0.206994] usb 1-3: Device not responding to setup address.
+[  +0.207942] usb 1-3: device not accepting address 75, error -71
+[  +0.127981] usb 1-3: new low-speed USB device number 76 using xhci_hcd
+[  +0.001072] usb 1-3: Device not responding to setup address.
+[  +0.206568] usb 1-3: Device not responding to setup address.
+[  +0.208391] usb 1-3: device not accepting address 76, error -71
+[  +0.000100] usb usb1-port3: unable to enumerate USB device
+[Apr27 22:43] usb 1-3: new low-speed USB device number 77 using xhci_hcd
+[  +0.128043] usb 1-3: device descriptor read/64, error -71
+[  +0.235530] usb 1-3: device descriptor read/64, error -71
+[  +0.236426] usb 1-3: new low-speed USB device number 78 using xhci_hcd
+[  +0.128032] usb 1-3: device descriptor read/64, error -71
+[  +0.235995] usb 1-3: device descriptor read/64, error -71
+[  +0.107896] usb usb1-port3: attempt power cycle
+[  +0.651626] usb 1-3: new low-speed USB device number 79 using xhci_hcd
+[  +0.000530] usb 1-3: Device not responding to setup address.
+[  +0.207931] usb 1-3: Device not responding to setup address.
+[  +0.207969] usb 1-3: device not accepting address 79, error -71
+[  +0.128002] usb 1-3: new low-speed USB device number 80 using xhci_hcd
+[  +0.001662] usb 1-3: Device not responding to setup address.
+[  +0.208007] usb 1-3: Device not responding to setup address.
+[  +0.206323] usb 1-3: device not accepting address 80, error -71
+[  +0.000087] usb usb1-port3: unable to enumerate USB device
+[  +3.875449] usb 1-3: new low-speed USB device number 81 using xhci_hcd
+[  +1.444439] usb 1-3: device descriptor read/64, error -71
+[  +0.235986] usb 1-3: device descriptor read/64, error -71
+[  +0.236002] usb 1-3: new low-speed USB device number 82 using xhci_hcd
+[  +0.128032] usb 1-3: device descriptor read/64, error -71
+[  +0.235972] usb 1-3: device descriptor read/64, error -71
+[  +0.107538] usb usb1-port3: attempt power cycle
+[  +2.288415] usb 1-3: new low-speed USB device number 84 using xhci_hcd
+[  +0.128026] usb 1-3: device descriptor read/64, error -71
+[  +0.235999] usb 1-3: device descriptor read/64, error -71
+[  +0.235969] usb 1-3: new low-speed USB device number 85 using xhci_hcd
+[  +0.128041] usb 1-3: device descriptor read/64, error -71
+[  +0.511955] usb 1-3: device descriptor read/64, error -71
+[  +0.108035] usb usb1-port3: attempt power cycle
+[  +0.651955] usb 1-3: new low-speed USB device number 86 using xhci_hcd
+[  +0.001812] usb 1-3: Device not responding to setup address.
+[  +0.207990] usb 1-3: Device not responding to setup address.
+[  +0.205800] usb 1-3: device not accepting address 86, error -71
+[  +0.128390] usb 1-3: new low-speed USB device number 87 using xhci_hcd
+[  +0.001183] usb 1-3: Device not responding to setup address.
+[  +0.208635] usb 1-3: Device not responding to setup address.
+[  +0.206165] usb 1-3: device not accepting address 87, error -71
+[  +0.000086] usb usb1-port3: unable to enumerate USB device
+[  +0.791930] usb 1-3: new low-speed USB device number 88 using xhci_hcd
+[  +0.819983] usb 1-3: device descriptor read/64, error -71
+[  +0.236042] usb 1-3: device descriptor read/64, error -71
+[  +0.235949] usb 1-3: new low-speed USB device number 89 using xhci_hcd
+[  +0.128027] usb 1-3: device descriptor read/64, error -71
+[  +0.236012] usb 1-3: device descriptor read/64, error -71
+[  +0.107996] usb usb1-port3: attempt power cycle
+[  +0.651973] usb 1-3: new low-speed USB device number 90 using xhci_hcd
+[  +0.000624] usb 1-3: Device not responding to setup address.
+[  +0.207995] usb 1-3: Device not responding to setup address.
+[  +0.207369] usb 1-3: device not accepting address 90, error -71
+[  +0.128008] usb 1-3: new low-speed USB device number 91 using xhci_hcd
+[  +0.001838] usb 1-3: Device not responding to setup address.
+[  +0.206788] usb 1-3: Device not responding to setup address.
+[  +0.207352] usb 1-3: device not accepting address 91, error -71
+[  +0.000101] usb usb1-port3: unable to enumerate USB device
+[  +1.543888] usb 1-3: new low-speed USB device number 92 using xhci_hcd
+[  +0.128022] usb 1-3: device descriptor read/64, error -71
+[  +0.235580] usb 1-3: device descriptor read/64, error -71
+[  +0.236388] usb 1-3: new low-speed USB device number 93 using xhci_hcd
+[  +0.128049] usb 1-3: device descriptor read/64, error -71
+[  +0.235491] usb 1-3: device descriptor read/64, error -71
+[  +0.108492] usb usb1-port3: attempt power cycle
+[  +0.651947] usb 1-3: new low-speed USB device number 94 using xhci_hcd
+[  +0.000686] usb 1-3: Device not responding to setup address.
+[  +0.208012] usb 1-3: Device not responding to setup address.
+[  +0.207312] usb 1-3: device not accepting address 94, error -71
+[  +0.127996] usb 1-3: new low-speed USB device number 95 using xhci_hcd
+[  +0.000681] usb 1-3: Device not responding to setup address.
+[  +0.208028] usb 1-3: Device not responding to setup address.
+[  +0.207293] usb 1-3: device not accepting address 95, error -71
+[  +0.000099] usb usb1-port3: unable to enumerate USB device
+[  +4.539862] usb 1-3: new low-speed USB device number 96 using xhci_hcd
+[  +0.128002] usb 1-3: device descriptor read/64, error -71
+[  +0.236035] usb 1-3: device descriptor read/64, error -71
+[  +0.235942] usb 1-3: new low-speed USB device number 97 using xhci_hcd
+[  +0.128019] usb 1-3: device descriptor read/64, error -71
+[  +0.236009] usb 1-3: device descriptor read/64, error -71
+[  +0.107520] usb usb1-port3: attempt power cycle
+[  +0.652434] usb 1-3: new low-speed USB device number 98 using xhci_hcd
+[  +0.000779] usb 1-3: Device not responding to setup address.
+[  +0.208004] usb 1-3: Device not responding to setup address.
+[  +0.207211] usb 1-3: device not accepting address 98, error -71
+[  +0.127997] usb 1-3: new low-speed USB device number 99 using xhci_hcd
+[  +0.000792] usb 1-3: Device not responding to setup address.
+[  +0.207586] usb 1-3: Device not responding to setup address.
+[  +0.207630] usb 1-3: device not accepting address 99, error -71
+[  +0.000099] usb usb1-port3: unable to enumerate USB device
+[Apr27 22:44] usb 1-3: new low-speed USB device number 100 using xhci_hcd
+[  +0.155300] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000013] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000007] usb 1-3: Product: RXThreshold
+[  +0.000006] usb 1-3: Manufacturer: www.obdev.at
+[  +0.001259] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000236] USB ADC Sensor Driver ON, Minor = 0
+[  +0.172599] usb 1-3: USB disconnect, device number 100
+[  +0.000227] USB ADC Removed
+[  +0.446319] usb 1-3: new low-speed USB device number 101 using xhci_hcd
+[  +0.255608] usb 1-3: new full-speed USB device number 102 using xhci_hcd
+[  +0.128230] usb 1-3: device descriptor read/64, error -71
+[  +0.236192] usb 1-3: device descriptor read/64, error -71
+[  +0.108037] usb usb1-port3: attempt power cycle
+[  +0.651932] usb 1-3: new low-speed USB device number 103 using xhci_hcd
+[  +0.001065] usb 1-3: Device not responding to setup address.
+[  +0.208003] usb 1-3: Device not responding to setup address.
+[  +0.206919] usb 1-3: device not accepting address 103, error -71
+[  +0.127526] usb 1-3: new full-speed USB device number 104 using xhci_hcd
+[  +0.000173] usb 1-3: Device not responding to setup address.
+[  +0.208324] usb 1-3: Device not responding to setup address.
+[  +0.207991] usb 1-3: device not accepting address 104, error -71
+[  +0.000099] usb usb1-port3: unable to enumerate USB device
+[ +10.767782] usb 1-3: new low-speed USB device number 105 using xhci_hcd
+[  +0.128019] usb 1-3: device descriptor read/64, error -71
+[  +0.235998] usb 1-3: device descriptor read/64, error -71
+[  +4.871934] usb 1-3: new low-speed USB device number 107 using xhci_hcd
+[  +0.128012] usb 1-3: device descriptor read/64, error -71
+[  +0.235908] usb 1-3: device descriptor read/64, error -71
+[  +0.236092] usb 1-3: new full-speed USB device number 108 using xhci_hcd
+[  +0.128012] usb 1-3: device descriptor read/64, error -71
+[  +0.236025] usb 1-3: device descriptor read/64, error -71
+[  +0.107986] usb usb1-port3: attempt power cycle
+[  +0.651949] usb 1-3: new full-speed USB device number 109 using xhci_hcd
+[  +0.000372] usb 1-3: Device not responding to setup address.
+[  +0.208012] usb 1-3: Device not responding to setup address.
+[  +0.207616] usb 1-3: device not accepting address 109, error -71
+[  +0.128003] usb 1-3: new full-speed USB device number 110 using xhci_hcd
+[  +0.000368] usb 1-3: Device not responding to setup address.
+[  +0.207430] usb 1-3: Device not responding to setup address.
+[  +0.207783] usb 1-3: device not accepting address 110, error -71
+[  +0.000073] usb usb1-port3: unable to enumerate USB device
+[Apr27 22:45] usb 1-3: new full-speed USB device number 111 using xhci_hcd
+[  +0.128058] usb 1-3: device descriptor read/64, error -71
+[  +1.343977] usb 1-3: device descriptor read/64, error -71
+[  +0.719985] usb 1-3: new full-speed USB device number 112 using xhci_hcd
+[  +0.128012] usb 1-3: device descriptor read/64, error -71
+[  +0.719987] usb 1-3: device descriptor read/64, error -71
+[  +0.107619] usb usb1-port3: attempt power cycle
+[  +0.652379] usb 1-3: new full-speed USB device number 113 using xhci_hcd
+[  +0.000355] usb 1-3: Device not responding to setup address.
+[  +0.207944] usb 1-3: Device not responding to setup address.
+[  +0.207689] usb 1-3: device not accepting address 113, error -71
+[  +0.403999] usb 1-3: new full-speed USB device number 114 using xhci_hcd
+[  +0.000348] usb 1-3: Device not responding to setup address.
+[  +0.207489] usb 1-3: Device not responding to setup address.
+[  +0.208147] usb 1-3: device not accepting address 114, error -71
+[  +0.000100] usb usb1-port3: unable to enumerate USB device
+[  +1.971886] usb 1-3: new full-speed USB device number 115 using xhci_hcd
+[  +0.968006] usb usb1-port3: Cannot enable. Maybe the USB cable is bad?
+[  +1.027963] usb 1-3: new full-speed USB device number 116 using xhci_hcd
+[  +0.128022] usb 1-3: device descriptor read/64, error -71
+[  +0.236000] usb 1-3: device descriptor read/64, error -71
+[  +0.108030] usb usb1-port3: attempt power cycle
+[  +0.651949] usb 1-3: new full-speed USB device number 117 using xhci_hcd
+[  +0.000199] usb 1-3: Device not responding to setup address.
+[  +0.207408] usb 1-3: Device not responding to setup address.
+[  +0.208396] usb 1-3: device not accepting address 117, error -71
+[  +0.127983] usb 1-3: new full-speed USB device number 118 using xhci_hcd
+[  +0.000383] usb 1-3: Device not responding to setup address.
+[  +0.207919] usb 1-3: Device not responding to setup address.
+[  +0.207696] usb 1-3: device not accepting address 118, error -71
+[  +0.000099] usb usb1-port3: unable to enumerate USB device
+[Apr27 22:46] usb 1-3: new full-speed USB device number 119 using xhci_hcd
+[  +0.128005] usb 1-3: device descriptor read/64, error -71
+[  +0.236002] usb 1-3: device descriptor read/64, error -71
+[  +0.511987] usb 1-3: new full-speed USB device number 120 using xhci_hcd
+[  +0.819994] usb 1-3: device descriptor read/64, error -71
+[  +0.236007] usb 1-3: device descriptor read/64, error -71
+[  +0.108004] usb usb1-port3: attempt power cycle
+[  +0.927966] usb 1-3: new full-speed USB device number 121 using xhci_hcd
+[  +0.000360] usb 1-3: Device not responding to setup address.
+[  +0.207526] usb 1-3: Device not responding to setup address.
+[  +0.208090] usb 1-3: device not accepting address 121, error -71
+[  +0.403575] usb 1-3: new full-speed USB device number 122 using xhci_hcd
+[  +0.000175] usb 1-3: Device not responding to setup address.
+[  +0.208454] usb 1-3: Device not responding to setup address.
+[  +0.207792] usb 1-3: device not accepting address 122, error -71
+[  +0.000085] usb usb1-port3: unable to enumerate USB device
+[  +2.619893] usb 1-3: new full-speed USB device number 123 using xhci_hcd
+[  +0.127765] usb 1-3: device descriptor read/64, error -71
+[  +0.236350] usb 1-3: device descriptor read/64, error -71
+[  +0.235885] usb 1-3: new full-speed USB device number 124 using xhci_hcd
+[  +0.612042] usb 1-3: device descriptor read/64, error -71
+[  +1.135964] usb 1-3: device descriptor read/64, error -71
+[  +0.107578] usb usb1-port3: attempt power cycle
+[  +0.652391] usb 1-3: new full-speed USB device number 125 using xhci_hcd
+[  +0.000369] usb 1-3: Device not responding to setup address.
+[  +0.208008] usb 1-3: Device not responding to setup address.
+[  +0.207642] usb 1-3: device not accepting address 125, error -71
+[  +0.127565] usb 1-3: new full-speed USB device number 126 using xhci_hcd
+[  +0.000190] usb 1-3: Device not responding to setup address.
+[  +0.208408] usb 1-3: Device not responding to setup address.
+[  +0.207821] usb 1-3: device not accepting address 126, error -71
+[  +0.000178] usb usb1-port3: unable to enumerate USB device
+[  +5.187766] usb 1-3: new low-speed USB device number 127 using xhci_hcd
+[  +0.155517] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000012] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000008] usb 1-3: Product: RXThreshold
+[  +0.000006] usb 1-3: Manufacturer: www.obdev.at
+[  +0.000858] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000302] USB ADC Sensor Driver ON, Minor = 0
+[Apr27 22:47] ADC file Opened
+[  +0.000020] Inside IOCTL
+[  +0.000006] cmd = 1 arg = 100
+[Apr27 22:48] ADC file Opened
+[  +0.000014] Inside IOCTL
+[  +0.000005] cmd = 1 arg = 122
+[Apr27 22:49] ADC file Opened
+[  +0.000012] Inside IOCTL
+[  +0.000005] cmd = 1 arg = 144
+[Apr27 22:51] usb 1-3: USB disconnect, device number 127
+[  +0.000144] USB ADC Removed
+[  +0.310290] usb 1-3: new full-speed USB device number 3 using xhci_hcd
+[Apr27 22:52] usb 1-3: new low-speed USB device number 6 using xhci_hcd
+[  +0.052537] BUG: unable to handle kernel NULL pointer dereference at 0000000000000091
+[  +0.000012] IP: usb_submit_urb.part.8+0x70/0x560
+[  +0.000001] PGD 800000022e32e067 P4D 800000022e32e067 PUD 22e32f067 PMD 0 
+[  +0.000005] Oops: 0000 [#4] SMP PTI
+[  +0.000002] Modules linked in: usb_driver(OE) rfcomm bnep nls_iso8859_1 arc4 joydev snd_hda_codec_hdmi snd_hda_codec_generic intel_rapl x86_pkg_temp_thermal intel_powerclamp coretemp kvm_intel kvm ath10k_pci ath10k_core irqbypass crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc ath mac80211 uvcvideo videobuf2_vmalloc aesni_intel videobuf2_memops videobuf2_v4l2 snd_soc_skl videobuf2_core snd_soc_skl_ipc aes_x86_64 snd_hda_ext_core crypto_simd glue_helper snd_soc_sst_dsp cryptd snd_soc_sst_ipc intel_cstate snd_soc_acpi intel_rapl_perf videodev snd_soc_core cfg80211 media snd_compress ac97_bus snd_pcm_dmaengine snd_hda_intel snd_hda_codec snd_hda_core snd_hwdep snd_pcm input_leds snd_seq_midi snd_seq_midi_event serio_raw intel_wmi_thunderbolt snd_rawmidi wmi_bmof idma64 snd_seq virt_dma snd_seq_device
+[  +0.000039]  snd_timer snd soundcore btusb btrtl btbcm shpchp btintel bluetooth intel_lpss_pci mei_me mei intel_lpss intel_pch_thermal ecdh_generic elan_i2c ideapad_laptop sparse_keymap mac_hid acpi_pad parport_pc ppdev lp parport autofs4 hid_generic usbhid nouveau i915 mxm_wmi ttm i2c_algo_bit drm_kms_helper syscopyarea sysfillrect r8169 sysimgblt ahci fb_sys_fops mii libahci i2c_hid drm hid wmi pinctrl_sunrisepoint video [last unloaded: usb_driver]
+[  +0.000029] CPU: 1 PID: 4604 Comm: userapp Tainted: G      D    OE    4.15.0-47-generic #50~16.04.1-Ubuntu
+[  +0.000001] Hardware name: LENOVO 80XL/LNVNB161216, BIOS 4WCN37WW 12/04/2017
+[  +0.000004] RIP: 0010:usb_submit_urb.part.8+0x70/0x560
+[  +0.000001] RSP: 0018:ffffbd97442a7d08 EFLAGS: 00010206
+[  +0.000003] RAX: 000000000000008e RBX: ffff95303beab240 RCX: ffff953077f05ba0
+[  +0.000001] RDX: ffff953077f05c20 RSI: 0000000001400000 RDI: ffff95303beab240
+[  +0.000002] RBP: ffffbd97442a7d48 R08: ffff953083ca7100 R09: ffff95307b403380
+[  +0.000001] R10: ffff95303beab240 R11: 00000000000002ad R12: ffff953077f05800
+[  +0.000002] R13: ffff953077f05800 R14: ffffbd97442a7df4 R15: 0000000000000000
+[  +0.000002] FS:  00007ff0681a4700(0000) GS:ffff953083c80000(0000) knlGS:0000000000000000
+[  +0.000002] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  +0.000001] CR2: 0000000000000091 CR3: 0000000258c60002 CR4: 00000000003606e0
+[  +0.000002] Call Trace:
+[  +0.000004]  usb_submit_urb+0x58/0x70
+[  +0.000004]  ? _cond_resched+0x1a/0x50
+[  +0.000002]  usb_start_wait_urb+0x6e/0x170
+[  +0.000002]  usb_control_msg+0xdc/0x140
+[  +0.000005]  adc_ioctl+0x66/0x87 [usb_driver]
+[  +0.000003]  do_vfs_ioctl+0xa4/0x600
+[  +0.000003]  ? putname+0x54/0x60
+[  +0.000003]  ? do_sys_open+0x1b4/0x290
+[  +0.000003]  SyS_ioctl+0x79/0x90
+[  +0.000003]  do_syscall_64+0x73/0x130
+[  +0.000003]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[  +0.000002] RIP: 0033:0x7ff067ccdf47
+[  +0.000002] RSP: 002b:00007ffd4ea64ca8 EFLAGS: 00000202 ORIG_RAX: 0000000000000010
+[  +0.000002] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 00007ff067ccdf47
+[  +0.000001] RDX: 0000000000000090 RSI: 0000000000000001 RDI: 0000000000000003
+[  +0.000002] RBP: 00007ffd4ea64cd0 R08: 0000000000000000 R09: 0000000000000008
+[  +0.000001] R10: 000000000000053f R11: 0000000000000202 R12: 0000000000400590
+[  +0.000002] R13: 00007ffd4ea64db0 R14: 0000000000000000 R15: 0000000000000000
+[  +0.000002] Code: c1 e8 0f 83 e0 0f 48 8b 04 c2 48 85 c0 0f 84 e9 04 00 00 48 89 47 50 c7 47 60 8d ff ff ff 48 89 fb c7 87 8c 00 00 00 00 00 00 00 <44> 0f b6 60 03 89 75 d4 41 83 e4 03 0f 85 a0 01 00 00 48 8b 97 
+[  +0.000032] RIP: usb_submit_urb.part.8+0x70/0x560 RSP: ffffbd97442a7d08
+[  +0.000001] CR2: 0000000000000091
+[  +0.000002] ---[ end trace 23ad831b038570b9 ]---
+[  +0.000001] BUG: unable to handle kernel NULL pointer dereference at 0000000000000091
+[  +0.000008] IP: usb_submit_urb.part.8+0x70/0x560
+[  +0.000001] PGD 8000000273da5067 P4D 8000000273da5067 PUD 24efdc067 PMD 0 
+[  +0.000005] Oops: 0000 [#5] SMP PTI
+[  +0.000002] Modules linked in: usb_driver(OE) rfcomm bnep nls_iso8859_1 arc4 joydev snd_hda_codec_hdmi snd_hda_codec_generic intel_rapl x86_pkg_temp_thermal intel_powerclamp coretemp kvm_intel kvm ath10k_pci ath10k_core irqbypass crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc ath mac80211 uvcvideo videobuf2_vmalloc aesni_intel videobuf2_memops videobuf2_v4l2 snd_soc_skl videobuf2_core snd_soc_skl_ipc aes_x86_64 snd_hda_ext_core crypto_simd glue_helper snd_soc_sst_dsp cryptd snd_soc_sst_ipc intel_cstate snd_soc_acpi intel_rapl_perf videodev snd_soc_core cfg80211 media snd_compress ac97_bus snd_pcm_dmaengine snd_hda_intel snd_hda_codec snd_hda_core snd_hwdep snd_pcm input_leds snd_seq_midi snd_seq_midi_event serio_raw intel_wmi_thunderbolt snd_rawmidi wmi_bmof idma64 snd_seq virt_dma snd_seq_device
+[  +0.000032]  snd_timer snd soundcore btusb btrtl btbcm shpchp btintel bluetooth intel_lpss_pci mei_me mei intel_lpss intel_pch_thermal ecdh_generic elan_i2c ideapad_laptop sparse_keymap mac_hid acpi_pad parport_pc ppdev lp parport autofs4 hid_generic usbhid nouveau i915 mxm_wmi
+[  +0.000015] ADC file Closed
+[  +0.000000]  ttm i2c_algo_bit drm_kms_helper syscopyarea sysfillrect r8169 sysimgblt ahci fb_sys_fops mii libahci i2c_hid drm hid wmi pinctrl_sunrisepoint video [last unloaded: usb_driver]
+[  +0.000026] CPU: 0 PID: 4551 Comm: userapp Tainted: G      D    OE    4.15.0-47-generic #50~16.04.1-Ubuntu
+[  +0.000001] Hardware name: LENOVO 80XL/LNVNB161216, BIOS 4WCN37WW 12/04/2017
+[  +0.000004] RIP: 0010:usb_submit_urb.part.8+0x70/0x560
+[  +0.000001] RSP: 0018:ffffbd9742117d08 EFLAGS: 00010206
+[  +0.000002] RAX: 000000000000008e RBX: ffff953023ddde40 RCX: ffff953077f05ba0
+[  +0.000002] RDX: ffff953077f05c20 RSI: 0000000001400000 RDI: ffff953023ddde40
+[  +0.000002] RBP: ffffbd9742117d48 R08: ffff953083c27100 R09: ffff95307b403380
+[  +0.000002] R10: ffff953023ddde40 R11: 000000000000033e R12: ffff953077f05800
+[  +0.000002] R13: ffff953077f05800 R14: ffffbd9742117df4 R15: 0000000000000000
+[  +0.000003] FS:  00007f7273ea8700(0000) GS:ffff953083c00000(0000) knlGS:0000000000000000
+[  +0.000002] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  +0.000002] CR2: 0000000000000091 CR3: 00000002225b6001 CR4: 00000000003606f0
+[  +0.000001] Call Trace:
+[  +0.000005]  usb_submit_urb+0x58/0x70
+[  +0.000003]  ? _cond_resched+0x1a/0x50
+[  +0.000002]  usb_start_wait_urb+0x6e/0x170
+[  +0.000003]  usb_control_msg+0xdc/0x140
+[  +0.000004]  adc_ioctl+0x66/0x87 [usb_driver]
+[  +0.000004]  do_vfs_ioctl+0xa4/0x600
+[  +0.000003]  ? putname+0x54/0x60
+[  +0.000003]  ? do_sys_open+0x1b4/0x290
+[  +0.000003]  SyS_ioctl+0x79/0x90
+[  +0.000002]  do_syscall_64+0x73/0x130
+[  +0.000003]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[  +0.000002] RIP: 0033:0x7f72739d1f47
+[  +0.000001] RSP: 002b:00007ffdb5715cc8 EFLAGS: 00000202 ORIG_RAX: 0000000000000010
+[  +0.000002] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 00007f72739d1f47
+[  +0.000001] RDX: 0000000000000064 RSI: 0000000000000001 RDI: 0000000000000003
+[  +0.000002] RBP: 00007ffdb5715cf0 R08: 0000000000000000 R09: 0000000000000008
+[  +0.000001] R10: 000000000000053f R11: 0000000000000202 R12: 0000000000400590
+[  +0.000001] R13: 00007ffdb5715dd0 R14: 0000000000000000 R15: 0000000000000000
+[  +0.000002] Code: c1 e8 0f 83 e0 0f 48 8b 04 c2 48 85 c0 0f 84 e9 04 00 00 48 89 47 50 c7 47 60 8d ff ff ff 48 89 fb c7 87 8c 00 00 00 00 00 00 00 <44> 0f b6 60 03 89 75 d4 41 83 e4 03 0f 85 a0 01 00 00 48 8b 97 
+[  +0.000030] RIP: usb_submit_urb.part.8+0x70/0x560 RSP: ffffbd9742117d08
+[  +0.000001] CR2: 0000000000000091
+[  +0.000002] ---[ end trace 23ad831b038570ba ]---
+[  +0.000000] BUG: unable to handle kernel NULL pointer dereference at 0000000000000068
+[  +0.000007] IP: usb_submit_urb.part.8+0x70/0x560
+[  +0.000002] PGD 80000002750cb067 P4D 80000002750cb067 PUD 26fe5e067 PMD 0 
+[  +0.000005] Oops: 0000 [#6] SMP PTI
+[  +0.000001] Modules linked in: usb_driver(OE) rfcomm bnep nls_iso8859_1 arc4 joydev snd_hda_codec_hdmi snd_hda_codec_generic intel_rapl x86_pkg_temp_thermal intel_powerclamp coretemp kvm_intel kvm ath10k_pci ath10k_core irqbypass crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc ath mac80211 uvcvideo videobuf2_vmalloc aesni_intel videobuf2_memops videobuf2_v4l2 snd_soc_skl videobuf2_core snd_soc_skl_ipc aes_x86_64 snd_hda_ext_core crypto_simd glue_helper snd_soc_sst_dsp cryptd snd_soc_sst_ipc intel_cstate snd_soc_acpi intel_rapl_perf videodev snd_soc_core cfg80211 media snd_compress ac97_bus snd_pcm_dmaengine snd_hda_intel snd_hda_codec snd_hda_core snd_hwdep snd_pcm input_leds snd_seq_midi snd_seq_midi_event serio_raw intel_wmi_thunderbolt snd_rawmidi wmi_bmof idma64 snd_seq virt_dma snd_seq_device
+[  +0.000033]  snd_timer snd soundcore btusb btrtl btbcm
+[  +0.000002] ADC file Closed
+[  +0.000002]  shpchp btintel bluetooth intel_lpss_pci mei_me mei intel_lpss intel_pch_thermal ecdh_generic elan_i2c ideapad_laptop sparse_keymap mac_hid acpi_pad parport_pc ppdev lp parport autofs4 hid_generic usbhid nouveau i915 mxm_wmi ttm i2c_algo_bit drm_kms_helper syscopyarea sysfillrect r8169 sysimgblt ahci fb_sys_fops mii libahci i2c_hid drm hid wmi pinctrl_sunrisepoint video [last unloaded: usb_driver]
+[  +0.000019] CPU: 3 PID: 4561 Comm: userapp Tainted: G      D    OE    4.15.0-47-generic #50~16.04.1-Ubuntu
+[  +0.000001] Hardware name: LENOVO 80XL/LNVNB161216, BIOS 4WCN37WW 12/04/2017
+[  +0.000004] RIP: 0010:usb_submit_urb.part.8+0x70/0x560
+[  +0.000002] RSP: 0018:ffffbd97441cfd08 EFLAGS: 00010206
+[  +0.000003] RAX: 0000000000000065 RBX: ffff95302e1fe780 RCX: ffff953077f05ba0
+[  +0.000002] RDX: ffff953077f05c20 RSI: 0000000001400000 RDI: ffff95302e1fe780
+[  +0.000001] RBP: ffffbd97441cfd48 R08: ffff953083da7100 R09: ffff95307b403380
+[  +0.000002] R10: ffff95302e1fe780 R11: 0000000000000341 R12: ffff953077f05800
+[  +0.000002] R13: ffff953077f05800 R14: ffffbd97441cfdf4 R15: 0000000000000000
+[  +0.000003] FS:  00007ff548d3d700(0000) GS:ffff953083d80000(0000) knlGS:0000000000000000
+[  +0.000002] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  +0.000001] CR2: 0000000000000068 CR3: 0000000223ccc001 CR4: 00000000003606e0
+[  +0.000002] Call Trace:
+[  +0.000005]  usb_submit_urb+0x58/0x70
+[  +0.000003]  ? _cond_resched+0x1a/0x50
+[  +0.000002]  usb_start_wait_urb+0x6e/0x170
+[  +0.000003]  usb_control_msg+0xdc/0x140
+[  +0.000004]  adc_ioctl+0x66/0x87 [usb_driver]
+[  +0.000004]  do_vfs_ioctl+0xa4/0x600
+[  +0.000003]  ? putname+0x54/0x60
+[  +0.000003]  ? do_sys_open+0x1b4/0x290
+[  +0.000003]  SyS_ioctl+0x79/0x90
+[  +0.000002]  do_syscall_64+0x73/0x130
+[  +0.000003]  entry_SYSCALL_64_after_hwframe+0x3d/0xa2
+[  +0.000002] RIP: 0033:0x7ff548866f47
+[  +0.000001] RSP: 002b:00007ffd2f7123e8 EFLAGS: 00000206 ORIG_RAX: 0000000000000010
+[  +0.000002] RAX: ffffffffffffffda RBX: 0000000000000000 RCX: 00007ff548866f47
+[  +0.000001] RDX: 000000000000007a RSI: 0000000000000001 RDI: 0000000000000003
+[  +0.000002] RBP: 00007ffd2f712410 R08: 0000000000000000 R09: 0000000000000008
+[  +0.000001] R10: 000000000000053f R11: 0000000000000206 R12: 0000000000400590
+[  +0.000001] R13: 00007ffd2f7124f0 R14: 0000000000000000 R15: 0000000000000000
+[  +0.000002] Code: c1 e8 0f 83 e0 0f 48 8b 04 c2 48 85 c0 0f 84 e9 04 00 00 48 89 47 50 c7 47 60 8d ff ff ff 48 89 fb c7 87 8c 00 00 00 00 00 00 00 <44> 0f b6 60 03 89 75 d4 41 83 e4 03 0f 85 a0 01 00 00 48 8b 97 
+[  +0.000030] RIP: usb_submit_urb.part.8+0x70/0x560 RSP: ffffbd97441cfd08
+[  +0.000001] CR2: 0000000000000068
+[  +0.000002] ---[ end trace 23ad831b038570bb ]---
+[  +0.000046] ADC file Closed
+[  +0.105772] usb 1-3: New USB device found, idVendor=16c0, idProduct=05dc
+[  +0.000008] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  +0.000004] usb 1-3: Product: USBasp
+[  +0.000004] usb 1-3: Manufacturer: www.fischl.de
+[  +0.000593] USB ADC with VID=16C0 PID=05DC Found
+[  +0.000108] USB ADC Sensor Driver ON, Minor = 0
+[Apr27 22:53] usb 1-3: USB disconnect, device number 6
