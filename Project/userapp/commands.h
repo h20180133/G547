@@ -8,7 +8,6 @@
 #define ADC_SEQ 0x01
 
 
-
 #define THRESHOLD _IOW(MAGIC_NUMBER,ADC_SEQ,unsigned long)
 
 
